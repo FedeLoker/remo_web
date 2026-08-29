@@ -1,0 +1,34 @@
+:root {
+  --paper: #f6f4ef;
+  --paper-soft: #ece9e1;
+  --ink: #15160f;
+  --ink-soft: #4d4f46;
+  --current: oklch(52% 0.09 165);
+  --current-light: oklch(83% 0.05 165);
+  --bank: oklch(52% 0.09 45);
+  --bank-light: oklch(85% 0.05 45);
+  --line: color-mix(in oklab, var(--ink) 22%, transparent);
+  --line-on-dark: color-mix(in oklab, var(--paper) 24%, transparent);
+  --font-sans: "Schibsted Grotesk", Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --text-xs: clamp(0.68rem, 0.66rem + 0.1vw, 0.75rem);
+  --text-sm: clamp(0.82rem, 0.78rem + 0.15vw, 0.94rem);
+  --text-body: clamp(1rem, 0.95rem + 0.2vw, 1.14rem);
+  --text-lead: clamp(1.2rem, 1.05rem + 0.65vw, 1.7rem);
+  --text-h2: clamp(2.4rem, 1.7rem + 3.4vw, 5.7rem);
+  --text-display: clamp(3.35rem, 1.7rem + 6.8vw, 9rem);
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 5rem;
+  --space-8: 8rem;
+  --space-9: 12rem;
+  --shell: 1440px;
+  --gutter: clamp(1.2rem, 4vw, 5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-height: 74px;
+}

@@ -1,0 +1,32 @@
+@keyframes settle-in {
+  from { transform: translateY(14px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.motion-ready .hero-title {
+  animation: settle-in 620ms var(--ease-out) both;
+}
+
+.motion-ready .hero-intro,
+.motion-ready .hero-actions {
+  animation: settle-in 520ms var(--ease-out) 120ms both;
+}
+
+.cross-bridge path {
+  transition: stroke-dashoffset 520ms var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

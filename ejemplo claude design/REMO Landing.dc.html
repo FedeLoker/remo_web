@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F6F4EF; color: #15160F; font-family: "Schibsted Grotesk", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  a { color: #1F6F5C; text-decoration: none; border-bottom: 1px solid rgba(31,111,92,0.35); }
+  a:hover { color: #A8562F; border-bottom-color: rgba(168,86,47,0.5); }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  input { font: inherit; color: inherit; }
+  ::selection { background: #C9E5DA; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh;">
+
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: rgba(246,244,239,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(21,22,15,0.12);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 108px; height: 30px; border: 1px dashed rgba(21,22,15,0.35); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #6B6C60;">LOGO REMO</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 22px; font-size: 15px;">
+        <a href="#personas" style="border: none; color: #35362B;">Personas</a>
+        <a href="#eventos" style="border: none; color: #35362B;">Eventos</a>
+        <a href="#remamos" style="border: 1px solid #15160F; color: #15160F; padding: 7px 15px;">Sumarse</a>
+      </div>
+    </div>
+    <div style="height: 2px; background: rgba(21,22,15,0.08);">
+      <div ref="{{ progressRef }}" style="height: 2px; width: 0%; background: #1F6F5C; transition: width 220ms cubic-bezier(0.16,1,0.3,1);"></div>
+    </div>
+  </div>
+
+  <section data-screen-label="Hero" style="max-width: 1240px; margin: 0 auto; padding: 150px 24px 90px;">
+    <p style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #A8562F;">Paraná · Santa Fe · Rosario · y la región</p>
+    <h1 style="margin: 0; font-size: clamp(44px, 8.4vw, 116px); line-height: 0.94; letter-spacing: -0.04em; font-weight: 600; max-width: 16ch;">
+      <span data-slide="left" style="display: block;">Talento hay.</span>
+      <span data-slide="right" style="display: block;">Problemas también.</span>
+      <span data-slide="up" style="display: block;">Hagamos que se encuentren.</span>
+    </h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: end; margin-top: 48px;">
+      <p style="margin: 0; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: #35362B; max-width: 46ch;">REMO conecta personas, proyectos, conocimiento y recursos para que pasen más cosas desde el Litoral.</p>
+      <div style="display: flex; align-items: flex-end; gap: 3px; height: 76px;">
+        <div style="width: 5px; height: 18%; background: rgba(21,22,15,0.3);"></div>
+        <div style="width: 5px; height: 34%; background: rgba(21,22,15,0.4);"></div>
+        <div style="width: 5px; height: 24%; background: rgba(21,22,15,0.35);"></div>
+        <div style="width: 5px; height: 50%; background: #1F6F5C;"></div>
+        <div style="width: 5px; height: 68%; background: #1F6F5C;"></div>
+        <div style="width: 5px; height: 44%; background: #1F6F5C;"></div>
+        <div style="width: 5px; height: 86%; background: #15160F;"></div>
+        <div style="width: 5px; height: 100%; background: #15160F;"></div>
+        <div style="width: 5px; height: 64%; background: #15160F;"></div>
+        <div style="width: 5px; height: 36%; background: #A8562F;"></div>
+        <div style="width: 5px; height: 22%; background: rgba(21,22,15,0.35);"></div>
+        <div style="width: 5px; height: 14%; background: rgba(21,22,15,0.25);"></div>
+      </div>
+    </div>
+    <div style="margin-top: 44px;">
+      <a href="#personas" style="border: none; font-size: 17px; color: #15160F; border-bottom: 1px solid #15160F; padding-bottom: 3px;">Conocé REMO ↓</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-top: 72px;">
+      <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.14); display: flex; align-items: flex-end; padding: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">FOTO HERO 1 — manos sobre un prototipo (horizontal, 1600×1000)</span>
+      </div>
+      <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.14); display: flex; align-items: flex-end; padding: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">FOTO HERO 2 — pizarrón, tres personas</span>
+      </div>
+      <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.14); display: flex; align-items: flex-end; padding: 16px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">FOTO HERO 3 — taller de noche</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="personas" data-screen-label="Personas" style="max-width: 1240px; margin: 0 auto; padding: 90px 24px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; border-top: 1px solid #15160F; padding-top: 22px;">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600; max-width: 22ch;">Mirá quién anda por acá.</h2>
+      <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">no hace falta trabajar en tecnología</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 40px;">
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF;">
+        <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #FFFFFF 8px 16px); display: flex; align-items: flex-end; padding: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B6C60;">FOTO — Lucía</span></div>
+        <div style="padding: 18px;">
+          <p style="margin: 0 0 2px; font-size: 19px; font-weight: 600;">Lucía</p>
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">Diseñadora industrial · Paraná</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #35362B;">Quiere encontrar gente para construir dispositivos accesibles.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF;">
+        <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #FFFFFF 8px 16px); display: flex; align-items: flex-end; padding: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B6C60;">FOTO — Martín</span></div>
+        <div style="padding: 18px;">
+          <p style="margin: 0 0 2px; font-size: 19px; font-weight: 600;">Martín</p>
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">Empresario metalúrgico · Santa Fe</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #35362B;">Tiene procesos que todavía se resuelven a mano y sabe que se puede mejor.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #15160F; color: #F6F4EF; display: flex; align-items: flex-end; padding: 24px; min-height: 220px;">
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 27px; line-height: 1.15; font-style: italic;">“Vine sin saber a qué venía y me fui con dos socios.”</p>
+      </div>
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF;">
+        <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #FFFFFF 8px 16px); display: flex; align-items: flex-end; padding: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B6C60;">FOTO — Juana</span></div>
+        <div style="padding: 18px;">
+          <p style="margin: 0 0 2px; font-size: 19px; font-weight: 600;">Juana</p>
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">Estudiante · Paraná</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #35362B;">Quiere entrar por primera vez en un proyecto real.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF;">
+        <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #FFFFFF 8px 16px); display: flex; align-items: flex-end; padding: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B6C60;">FOTO — Andrés</span></div>
+        <div style="padding: 18px;">
+          <p style="margin: 0 0 2px; font-size: 19px; font-weight: 600;">Andrés</p>
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">Ingeniero · Rosario</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #35362B;">Puede ayudar con electrónica y sistemas embebidos.</p>
+        </div>
+      </div>
+      <div data-reveal="1" style="border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF;">
+        <div style="aspect-ratio: 4/3; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #FFFFFF 8px 16px); display: flex; align-items: flex-end; padding: 12px;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #6B6C60;">FOTO — Sofía</span></div>
+        <div style="padding: 18px;">
+          <p style="margin: 0 0 2px; font-size: 19px; font-weight: 600;">Sofía</p>
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">Gestión pública · Santa Fe</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #35362B;">Busca conectar tecnología con problemas concretos de la ciudad.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 44px; border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF; padding: 30px;">
+      <p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">1 de 3</p>
+      <h3 style="margin: 0 0 6px; font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.025em; font-weight: 600;">¿Y vos, qué hacés?</h3>
+      <p style="margin: 0 0 20px; font-size: 15px; color: #6B6C60;">Un toque y seguí. No pedimos nada todavía.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ roles }}" as="chip" hint-placeholder-count="10">
+          <button type="button" onClick="{{ chip.onClick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ rolEcho }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 20px 0 0; font-family: 'Instrument Serif', serif; font-size: 24px; font-style: italic; color: #1F6F5C;">{{ rolEcho }}</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <section data-screen-label="Mecanismo" style="max-width: 1240px; margin: 0 auto; padding: 90px 24px;">
+    <div style="border-top: 1px solid #15160F; padding-top: 22px;">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600; max-width: 24ch;">Lo que pasa cuando se encuentran.</h2>
+      <p style="margin: 14px 0 0; font-size: 17px; line-height: 1.55; color: #35362B; max-width: 52ch;">Tocá algo de la izquierda y mirá quién puede resolverlo.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 36px;">
+      <div>
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6B6C60;">Lo que hace falta</p>
+        <div style="display: grid; gap: 8px;">
+          <sc-for list="{{ needs }}" as="n" hint-placeholder-count="4">
+            <button type="button" onClick="{{ n.onClick }}" style="{{ n.style }}">{{ n.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #6B6C60;">Lo que hay</p>
+        <div style="display: grid; gap: 8px;">
+          <sc-for list="{{ haves }}" as="h" hint-placeholder-count="4">
+            <div style="{{ h.style }}">{{ h.label }}</div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ matchOutcome }}" hint-placeholder-val="{{ false }}">
+      <p style="margin: 22px 0 0; font-size: 17px; line-height: 1.55; color: #15160F; border-left: 2px solid #1F6F5C; padding-left: 14px; max-width: 60ch;">{{ matchOutcome }}</p>
+    </sc-if>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-top: 48px;">
+      <div style="border: 1px solid rgba(21,22,15,0.18); padding: 18px; background: #FFFFFF;"><p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A8562F;">01</p><p style="margin: 0; font-size: 16px; font-weight: 500;">Alguien tiene un problema</p></div>
+      <div style="border: 1px solid rgba(21,22,15,0.18); padding: 18px; background: #FFFFFF;"><p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A8562F;">02</p><p style="margin: 0; font-size: 16px; font-weight: 500;">Alguien conoce a alguien</p></div>
+      <div style="border: 1px solid rgba(21,22,15,0.18); padding: 18px; background: #FFFFFF;"><p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A8562F;">03</p><p style="margin: 0; font-size: 16px; font-weight: 500;">Aparece quien sabe</p></div>
+      <div style="border: 1px solid rgba(21,22,15,0.18); padding: 18px; background: #FFFFFF;"><p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #A8562F;">04</p><p style="margin: 0; font-size: 16px; font-weight: 500;">Se arma algo</p></div>
+      <div style="border: 1px solid #15160F; padding: 18px; background: #15160F; color: #F6F4EF;"><p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #E0A87C;">05</p><p style="margin: 0; font-size: 16px; font-weight: 500;">Lo mostramos</p></div>
+    </div>
+
+    <div style="margin-top: 44px; border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF; padding: 30px;">
+      <p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">2 de 3</p>
+      <h3 style="margin: 0 0 6px; font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.025em; font-weight: 600;">¿Qué te gustaría que pase?</h3>
+      <p style="margin: 0 0 20px; font-size: 15px; color: #6B6C60;">Podés elegir más de una.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ busca }}" as="chip" hint-placeholder-count="10">
+          <button type="button" onClick="{{ chip.onClick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Visión" style="background: #15160F; color: #F6F4EF; margin-top: 40px;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 24px;">
+      <p style="margin: 0 0 30px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #E0A87C;">Qué queremos lograr</p>
+      <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: clamp(34px, 6vw, 76px); line-height: 1.04; max-width: 24ch;">Las cosas interesantes también pueden pasar de este lado del río.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; margin-top: 56px;">
+        <div style="display: grid; gap: 4px; font-size: clamp(24px, 3vw, 38px); line-height: 1.15; letter-spacing: -0.02em; font-weight: 500;">
+          <span>encontrar talento</span>
+          <span>crear cosas</span>
+          <span>probar ideas</span>
+          <span>conseguir ayuda</span>
+          <span>emprender</span>
+          <span>aprender</span>
+          <span style="color: #E0A87C;">colaborar</span>
+        </div>
+        <div style="display: grid; gap: 22px; align-content: start;">
+          <p style="margin: 0; font-size: 18px; line-height: 1.55; color: rgba(246,244,239,0.78); max-width: 40ch;">Queremos una región donde cada una de esas cosas sea cada vez más fácil. Y donde las mejores personas no tengan que irse para encontrar un ecosistema extraordinario.</p>
+          <p style="margin: 0; font-size: 18px; line-height: 1.55; color: rgba(246,244,239,0.78); max-width: 40ch;">No necesitamos esperar que las cosas interesantes pasen en otro lado. Podemos construirlas desde acá.</p>
+          <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 26px; font-style: italic;">Contra la corriente, a favor de algo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="eventos" data-screen-label="Eventos" style="max-width: 1240px; margin: 0 auto; padding: 90px 24px;">
+    <div style="border-top: 1px solid #15160F; padding-top: 22px;">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600;">Lo que está pasando.</h2>
+    </div>
+    <div style="display: grid; gap: 0; margin-top: 32px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; padding: 18px 0; min-height: 56px; border-bottom: 1px solid rgba(21,22,15,0.15);">
+        <span style="flex: 0 0 96px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">12 SEP</span>
+        <p style="margin: 0; flex: 1 1 260px; font-size: 19px; font-weight: 500;">Maker night — sensores y cosas que miden el río</p>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">Paraná</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6F5C;">quedan lugares</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; padding: 18px 0; min-height: 56px; border-bottom: 1px solid rgba(21,22,15,0.15);">
+        <span style="flex: 0 0 96px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">27 SEP</span>
+        <p style="margin: 0; flex: 1 1 260px; font-size: 19px; font-weight: 500;">Visita a planta: automatización en una metalúrgica</p>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">Santa Fe</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6F5C;">quedan lugares</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; padding: 18px 0; min-height: 56px; border-bottom: 1px solid rgba(21,22,15,0.15);">
+        <span style="flex: 0 0 96px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">18 OCT</span>
+        <p style="margin: 0; flex: 1 1 260px; font-size: 19px; font-weight: 500;">Demo night — mostrá algo que estés haciendo, aunque no funcione</p>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">Rosario</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">abre pronto</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; padding: 18px 0; min-height: 56px; border-bottom: 1px solid rgba(21,22,15,0.15); color: #8C8D82;">
+        <span style="flex: 0 0 96px; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">02 AGO</span>
+        <p style="margin: 0; flex: 1 1 260px; font-size: 19px; font-weight: 500;">Primer encuentro REMO — 30 personas, un proyector prestado</p>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">Paraná</span>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px;">pasó</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 44px; border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF; padding: 30px;">
+      <p style="margin: 0 0 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">3 de 3</p>
+      <h3 style="margin: 0 0 6px; font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.025em; font-weight: 600;">¿A cuáles vendrías?</h3>
+      <p style="margin: 0 0 20px; font-size: 15px; color: #6B6C60;">Nos sirve para armar los próximos.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ eventos }}" as="chip" hint-placeholder-count="10">
+          <button type="button" onClick="{{ chip.onClick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Participar" style="max-width: 1240px; margin: 0 auto; padding: 90px 24px;">
+    <div style="border-top: 1px solid #15160F; padding-top: 22px;">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600; max-width: 20ch;">Participar puede ser muy poco.</h2>
+      <p style="margin: 14px 0 0; font-size: 17px; line-height: 1.55; color: #35362B; max-width: 54ch;">No hay que asumir obligaciones permanentes. Tocá lo que podrías hacer vos y mirá qué pasa con el bloque de al lado.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 36px; align-items: start;">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ gestos }}" as="chip" hint-placeholder-count="7">
+          <button type="button" onClick="{{ chip.onClick }}" style="{{ chip.style }}">{{ chip.label }}</button>
+        </sc-for>
+      </div>
+      <div style="overflow: hidden; border: 1px solid rgba(21,22,15,0.14); background: #FFFFFF; padding: 26px;">
+        <div style="{{ palancaStyle }}">
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">{{ palancaLabel }}</p>
+          <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; font-style: italic;">Muchos empujes chicos mueven cosas grandes.</p>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 3px; height: 40px; margin-top: 22px;">
+          <sc-for list="{{ trazos }}" as="t" hint-placeholder-count="7">
+            <div style="{{ t.style }}"></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="remamos" data-screen-label="Remamos" style="background: #15160F; color: #F6F4EF;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 110px 24px;">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start;">
+          <div>
+            <h2 style="margin: 0; font-size: clamp(46px, 8vw, 104px); line-height: 0.96; letter-spacing: -0.04em; font-weight: 600;">¿Remamos?</h2>
+            <p style="margin: 22px 0 0; font-size: 19px; line-height: 1.5; color: rgba(246,244,239,0.78); max-width: 34ch;">Ya conociste un poco de nosotros. Ahora queremos conocerte a vos.</p>
+            <div style="display: grid; gap: 8px; margin-top: 32px; padding: 22px 0; border-top: 1px solid rgba(246,244,239,0.2); border-bottom: 1px solid rgba(246,244,239,0.2); font-size: 17px; line-height: 1.6;">
+              <p style="margin: 0;"><span style="color: rgba(246,244,239,0.5);">Sos: </span>{{ resumenSoy }}</p>
+              <p style="margin: 0;"><span style="color: rgba(246,244,239,0.5);">Buscás: </span>{{ resumenBusco }}</p>
+              <p style="margin: 0;"><span style="color: rgba(246,244,239,0.5);">Te copan: </span>{{ resumenEventos }}</p>
+            </div>
+          </div>
+          <div style="display: grid; gap: 22px;">
+            <div style="display: grid; gap: 18px;">
+              <input type="text" placeholder="Nombre" value="{{ nombre }}" onChange="{{ onNombre }}" style="background: transparent; border: none; border-bottom: 1px solid rgba(246,244,239,0.35); padding: 10px 0; font-size: 18px; color: #F6F4EF; outline: none;" />
+              <input type="text" placeholder="Ciudad" value="{{ ciudad }}" onChange="{{ onCiudad }}" style="background: transparent; border: none; border-bottom: 1px solid rgba(246,244,239,0.35); padding: 10px 0; font-size: 18px; color: #F6F4EF; outline: none;" />
+              <input type="text" placeholder="Mail o WhatsApp" value="{{ contacto }}" onChange="{{ onContacto }}" style="background: transparent; border: none; border-bottom: 1px solid rgba(246,244,239,0.35); padding: 10px 0; font-size: 18px; color: #F6F4EF; outline: none;" />
+            </div>
+            <button type="button" onClick="{{ onSubmit }}" style="background: #F6F4EF; color: #15160F; border: 1px solid #F6F4EF; padding: 16px 24px; font-size: 18px; font-weight: 500;" style-hover="background: #E0A87C; border-color: #E0A87C;">Listo, sumame</button>
+            <p style="margin: 0; font-size: 14px; line-height: 1.5; color: rgba(246,244,239,0.5);">No mandamos newsletters. Te escribimos cuando hay algo cerca tuyo.</p>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="display: grid; gap: 20px; min-height: 340px; align-content: center;">
+          <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: clamp(38px, 6vw, 76px); line-height: 1.05; max-width: 22ch;">Listo. Nos vemos en la próxima.</p>
+          <p style="margin: 0; font-size: 19px; color: rgba(246,244,239,0.78);">Maker night · 12 de septiembre · Paraná. Te escribimos con la dirección.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 90px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; border-top: 1px solid rgba(21,22,15,0.2); padding-top: 28px;">
+      <div>
+        <div style="width: 108px; height: 30px; border: 1px dashed rgba(21,22,15,0.35); display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: #6B6C60;">LOGO REMO</div>
+        <p style="margin: 14px 0 0; font-size: 14px; line-height: 1.55; color: #6B6C60; max-width: 34ch;">Red de Emprendedores y Makers de las Orillas. Una comunidad abierta del Litoral argentino.</p>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 2; color: #35362B;">
+        <p style="margin: 0;">Paraná</p>
+        <p style="margin: 0;">Santa Fe</p>
+        <p style="margin: 0;">Rosario</p>
+      </div>
+      <div style="font-size: 15px; line-height: 2;">
+        <p style="margin: 0;"><a href="#remamos">Sumarse</a></p>
+        <p style="margin: 0;"><a href="#eventos">Próximos encuentros</a></p>
+        <p style="margin: 0;"><a href="mailto:hola@remo.la">hola@remo.la</a></p>
+      </div>
+      <div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 24px; font-style: italic; color: #15160F;">No hace falta remarla solo.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280}}">
+class Component extends DCLogic {
+  state = { rol: null, busca: [], eventos: [], gestos: [], nombre: "", ciudad: "", contacto: "", sent: false };
+
+  progressRef = React.createRef();
+
+  componentDidMount() {
+    try {
+      const raw = sessionStorage.getItem("remo.onboarding");
+      if (raw) this.setState(JSON.parse(raw));
+    } catch (e) {}
+
+    this.onScroll = () => {
+      const el = this.progressRef.current;
+      if (!el) return;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      el.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + "%";
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    this.onScroll();
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      document.querySelectorAll("[data-slide]").forEach((el, i) => {
+        const dir = el.getAttribute("data-slide");
+        el.style.opacity = "0";
+        el.style.transform = dir === "left" ? "translateX(-40px)" : dir === "right" ? "translateX(40px)" : "translateY(20px)";
+        el.style.transition = "opacity 700ms cubic-bezier(0.16,1,0.3,1) " + (i * 140) + "ms, transform 900ms cubic-bezier(0.16,1,0.3,1) " + (i * 140) + "ms";
+        requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = "1"; el.style.transform = "none"; }));
+      });
+
+      const targets = document.querySelectorAll("[data-reveal]");
+      targets.forEach((el) => { el.style.opacity = "0"; el.style.transform = "translateY(12px)"; });
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const idx = Array.prototype.indexOf.call(targets, e.target);
+          e.target.style.transition = "opacity 240ms ease-out " + ((idx % 4) * 60) + "ms, transform 240ms ease-out " + ((idx % 4) * 60) + "ms";
+          e.target.style.opacity = "1";
+          e.target.style.transform = "none";
+          this.io.unobserve(e.target);
+        });
+      }, { rootMargin: "-8% 0px" });
+      targets.forEach((el) => this.io.observe(el));
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+    if (this.io) this.io.disconnect();
+  }
+
+  persist(next) {
+    this.setState(next, () => {
+      try { sessionStorage.setItem("remo.onboarding", JSON.stringify(this.state)); } catch (e) {}
+    });
+  }
+
+  chipStyle(on) {
+    return {
+      padding: "11px 16px",
+      minHeight: "44px",
+      fontSize: "15px",
+      background: on ? "#1F6F5C" : "transparent",
+      color: on ? "#F6F4EF" : "#15160F",
+      border: "1px solid " + (on ? "#1F6F5C" : "rgba(21,22,15,0.25)"),
+      transition: "background 160ms ease-out, color 160ms ease-out, border-color 160ms ease-out"
+    };
+  }
+
+  single(list, key) {
+    return list.map((label) => ({
+      label,
+      style: this.chipStyle(this.state[key] === label),
+      onClick: () => this.persist({ [key]: this.state[key] === label ? null : label })
+    }));
+  }
+
+  multi(list, key, cap) {
+    return list.map((label) => {
+      const on = this.state[key].indexOf(label) > -1;
+      return {
+        label,
+        style: this.chipStyle(on),
+        onClick: () => {
+          let next = on ? this.state[key].filter((x) => x !== label) : this.state[key].concat([label]);
+          if (cap && next.length > cap) next = next.slice(next.length - cap);
+          this.persist({ [key]: next });
+        }
+      };
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+
+    const needsData = [
+      { need: "“Necesito alguien que sepa LoRa.”", have: "Andrés — electrónica y embebidos", out: "Andrés ya montó una red LoRa en el campo de un amigo. Se conocieron en la segunda maker night." },
+      { need: "“Busco diseñador para probar una idea.”", have: "Lucía — diseño industrial", out: "Dos semanas después había un prototipo impreso en 3D y una prueba con usuarios reales." },
+      { need: "“Este proceso lo hacemos a mano.”", have: "Martín — planta metalúrgica", out: "Martín abrió la planta para que un grupo midiera el proceso. Salieron tres ideas, una está en marcha." },
+      { need: "“Quiero organizar una noche de robótica.”", have: "Juana — estudiante con ganas", out: "Juana la organizó. Vinieron 40 personas y un club de robótica prestó los kits." }
+    ];
+    const mi = s.matchIndex;
+    const needs = needsData.map((d, i) => ({
+      label: d.need,
+      style: {
+        textAlign: "left",
+        padding: "16px 18px",
+        fontSize: "16px",
+        lineHeight: 1.45,
+        background: mi === i ? "#15160F" : "#FFFFFF",
+        color: mi === i ? "#F6F4EF" : "#15160F",
+        border: "1px solid " + (mi === i ? "#15160F" : "rgba(21,22,15,0.18)"),
+        transition: "background 200ms ease-out, color 200ms ease-out, transform 300ms cubic-bezier(0.16,1,0.3,1)",
+        transform: mi === i ? "translateX(10px)" : "none"
+      },
+      onClick: () => this.setState({ matchIndex: mi === i ? null : i })
+    }));
+    const haves = needsData.map((d, i) => ({
+      label: d.have,
+      style: {
+        padding: "16px 18px",
+        fontSize: "16px",
+        lineHeight: 1.45,
+        background: "#FFFFFF",
+        border: "1px solid " + (mi === i ? "#1F6F5C" : "rgba(21,22,15,0.18)"),
+        color: mi === i ? "#1F6F5C" : "#6B6C60",
+        transition: "border-color 200ms ease-out, color 200ms ease-out, transform 300ms cubic-bezier(0.16,1,0.3,1)",
+        transform: mi === i ? "translateX(-10px)" : "none"
+      }
+    }));
+
+    const gestosList = ["venir a algo", "ayudar a alguien", "proponer una idea", "prestar una herramienta", "contar lo que sabés", "conectar dos personas", "simplemente aparecer"];
+    const n = s.gestos.length;
+    const trazos = gestosList.map((g, i) => ({
+      style: {
+        width: "5px",
+        height: (i < n ? 100 : 20) + "%",
+        background: i < n ? "#1F6F5C" : "rgba(21,22,15,0.15)",
+        transition: "height 300ms cubic-bezier(0.16,1,0.3,1), background 300ms ease-out"
+      }
+    }));
+
+    const echoes = {
+      "Estudio": "Hay 9 personas acá que están estudiando algo.",
+      "Construyo cosas": "Hay 14 personas acá que construyen cosas.",
+      "Tengo una empresa": "Hay 6 empresas de la región dando vueltas por acá.",
+      "Diseño": "Hay 5 diseñadores buscando con quién probar ideas.",
+      "Investigo": "Hay 4 investigadores queriendo salir del paper.",
+      "Emprendo": "Hay 11 personas emprendiendo algo en este momento.",
+      "Sector público": "Hay 3 personas del sector público buscando resolver cosas concretas.",
+      "Tengo una idea": "La mitad de la comunidad empezó igual: con una idea y nadie con quien hablarla.",
+      "Me interesa nomás": "Perfecto. La mayoría llegó por curiosidad.",
+      "Otra cosa": "Mejor. Las mezclas raras son las que más sirven acá."
+    };
+
+    return {
+      progressRef: this.progressRef,
+      roles: this.single(["Estudio", "Construyo cosas", "Tengo una empresa", "Diseño", "Investigo", "Emprendo", "Sector público", "Tengo una idea", "Me interesa nomás", "Otra cosa"], "rol"),
+      rolEcho: s.rol ? echoes[s.rol] : false,
+      busca: this.multi(["Encontrar gente para un proyecto", "Aprender", "Conseguir trabajo", "Encontrar talento", "Armar una startup", "Resolver un problema", "Conocer gente interesante", "Ayudar a otros", "Mostrar algo que estoy haciendo", "Todavía no sé"], "busca", 2),
+      eventos: this.multi(["Encuentros informales", "Workshops", "Hackathons", "Demo nights", "Visitas a empresas", "Proyectos comunitarios", "Charlas", "Maker nights", "Cenas", "Desafíos técnicos"], "eventos"),
+      gestos: this.multi(gestosList, "gestos"),
+      needs: needs,
+      haves: haves,
+      matchOutcome: mi != null ? needsData[mi].out : false,
+      trazos: trazos,
+      palancaLabel: n === 0 ? "elegí uno y mirá" : n + (n === 1 ? " empuje" : " empujes"),
+      palancaStyle: { transform: "translateX(" + Math.min(n * 7, 49) + "px)", transition: "transform 400ms cubic-bezier(0.16,1,0.3,1)" },
+      resumenSoy: s.rol || "todavía no nos dijiste",
+      resumenBusco: s.busca.length ? s.busca.join(" + ").toLowerCase() : "todavía no nos dijiste",
+      resumenEventos: s.eventos.length ? s.eventos.join(" + ").toLowerCase() : "todavía no nos dijiste",
+      nombre: s.nombre,
+      ciudad: s.ciudad,
+      contacto: s.contacto,
+      onNombre: (e) => this.setState({ nombre: e.target.value }),
+      onCiudad: (e) => this.setState({ ciudad: e.target.value }),
+      onContacto: (e) => this.setState({ contacto: e.target.value }),
+      onSubmit: () => this.setState({ sent: true }, () => window.scrollTo({ top: document.getElementById("remamos").offsetTop - 60, behavior: "smooth" })),
+      sent: s.sent,
+      notSent: !s.sent
+    };
+  }
+}
+</script>
+</body>
+</html>

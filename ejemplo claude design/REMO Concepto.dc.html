@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #F6F4EF; color: #15160F; font-family: "Schibsted Grotesk", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #1F6F5C; text-decoration: none; border-bottom: 1px solid rgba(31,111,92,0.35); }
+  a:hover { color: #A8562F; border-bottom-color: rgba(168,86,47,0.5); }
+  ::selection { background: #C9E5DA; }
+</style>
+</helmet>
+
+<div style="max-width: 1120px; margin: 0 auto; padding: 72px 40px 160px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; border-bottom: 1px solid #15160F; padding-bottom: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;">
+    <span>REMO — Red de Emprendedores y Makers de las Orillas</span>
+    <span style="color: #6B6C60;">Documento de concepto · v1 · ago 2026</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; padding: 84px 0 96px; border-bottom: 1px solid rgba(21,22,15,0.15);">
+    <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">A · Concepto rector</p>
+    <h1 style="margin: 0; font-size: clamp(40px, 7vw, 82px); line-height: 0.95; letter-spacing: -0.035em; font-weight: 600; max-width: 20ch; text-wrap: balance;">La web no cuenta REMO: te hace remar un tramo.</h1>
+    <p style="margin: 0; max-width: 62ch; font-size: clamp(18px, 2vw, 23px); line-height: 1.5; color: #35362B;">Nadie se suma a una comunidad porque le expliquen bien qué es. Se suma porque ve gente parecida haciendo cosas y porque, en algún momento del recorrido, ya empezó a participar sin darse cuenta. Entonces la página no es un folleto con formulario al final: es un tramo corto de remada. Mirás quién está. Decís algo tuyo. Ves qué pasa cuando dos personas se encuentran. Y al final la página ya sabe algo de vos, así que pedirte el nombre se siente como cerrar una charla, no como llenar un formulario.</p>
+    <p style="margin: 0; max-width: 62ch; font-size: 17px; line-height: 1.6; color: #6B6C60;">Regla que ordena todas las decisiones: <em style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #15160F;">primero evidencia, después participación, recién al final identidad.</em> Si un elemento no muestra algo real ni invita a un gesto barato, se cae.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 88px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">B</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Storytelling</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">El recorrido emocional, de la primera pantalla al envío.</p>
+    </div>
+    <div style="display: grid; gap: 2px;">
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">0—5s</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Reconocimiento</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">Una afirmación, no una presentación. La persona entiende que esto es sobre algo que ya le pasa: tiene ganas de hacer algo y le falta gente.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">esto me habla</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">5—25s</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Curiosidad humana</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">Aparecen personas con nombre, oficio y una frase de lo que buscan. Ninguna categoría, ningún organigrama. La variedad hace el argumento sola.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">yo podría estar ahí</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">25—40s</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Implicación barata</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">La primera pregunta: “¿Y vos, qué hacés?”. Un toque, sin campos, sin mail. Es el momento en que deja de ser espectadora.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">ya dije algo</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">40s—1m</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Prueba del mecanismo</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">Necesidades y capacidades reales se encuentran a la vista. No se explica cómo funciona REMO: se ve funcionando, con frases textuales de gente.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">acá pasan cosas</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">1—2m</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Ambición y orgullo</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">El único tramo declarativo del sitio, y el más editorial: qué región queremos y por qué no hace falta irse para tenerla. Corto, seco, en primera persona del plural.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #A8562F;">se puede desde acá</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">2—3m</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Alivio</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">Participar no compromete tu vida. Acá se baja el costo de entrada explícitamente, justo antes de pedir algo. Sin esta sección, la ambición asusta.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">no me cuesta nada</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px minmax(0,1fr) 150px; gap: 24px; align-items: baseline; padding: 22px 0; border-top: 1px solid rgba(21,22,15,0.15); border-bottom: 1px solid rgba(21,22,15,0.15);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6C60;">3m+</span>
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em;">Reciprocidad</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #35362B; max-width: 52ch;">“¿Remamos?” La página devuelve lo que la persona fue diciendo y sólo pide lo que falta: nombre, ciudad, contacto. Tres campos, porque los otros tres ya los contestó.</p>
+        </div>
+        <span style="font-family: 'Instrument Serif', serif; font-size: 21px; font-style: italic; color: #1F6F5C;">quiero ir</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">C</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Arquitectura</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Nueve tramos. Cada uno tiene un solo trabajo; si no lo tiene, se fusiona.</p>
+    </div>
+    <div style="display: grid; gap: 14px;">
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">01</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Hero — la afirmación</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Que en cinco segundos se entienda la tesis y que se sienta una fuerza, no una bienvenida. Un CTA suave hacia abajo, nada de registro.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">02</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Las personas</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Probar la variedad humana antes de cualquier explicación. Tarjetas con nombre, oficio y una intención concreta. Cierra con la pregunta 1.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">03</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Lo que pasa cuando se encuentran</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Mostrar el mecanismo en acción: necesidades de un lado, capacidades y recursos del otro, y el momento en que se conectan. Cierra con la pregunta 2.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">04</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Historias que ya pasaron</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Sección nueva: dos o tres casos con final. Es la única prueba de que el mecanismo no es teoría. Arranca chica (una historia) y crece con el tiempo.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">05</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Qué queremos lograr</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">El tramo editorial. Cambia de color y de tipografía. Máximo 90 palabras. Acá vive el orgullo regional y la dosis irreverente.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">06</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Eventos</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Que se vea que hay fecha, lugar y gente. Formato lista tipo cartelera, no grilla de cards decorativas. Cierra con la pregunta 3.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">07</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Participar no compromete tu vida</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Bajar el costo percibido de entrada. Lista de gestos mínimos posibles. Es la sección que habilita el CTA final.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #15160F; border: 1px solid #15160F; color: #F6F4EF;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #E0A87C;">08</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">¿Remamos?</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: rgba(246,244,239,0.75);">Cierre y conversión. Devuelve las respuestas guardadas y pide sólo nombre, ciudad y contacto. Confirmación humana, no “gracias por suscribirte”.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 20px; padding: 20px 22px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #A8562F;">09</span>
+        <div>
+          <h3 style="margin: 0 0 4px; font-size: 18px; font-weight: 600;">Pie</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Qué es REMO en dos líneas y el acrónimo, para quien lo busque. Ciudades, canales, y una frase de remo. Lo institucional vive acá, no arriba.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">D</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Dirección visual</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Papel cálido, tinta densa, dos acentos. La tipografía hace el trabajo.</p>
+    </div>
+    <div style="display: grid; gap: 36px;">
+
+      <div style="background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12); padding: 32px;">
+        <p style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6C60;">Tipografía</p>
+        <p style="margin: 0; font-size: clamp(34px, 5vw, 58px); line-height: 0.98; letter-spacing: -0.035em; font-weight: 600;">Schibsted Grotesk</p>
+        <p style="margin: 10px 0 28px; font-size: 15px; line-height: 1.55; color: #35362B; max-width: 60ch;">Sistema principal. Grotesca humanista, contemporánea, con formas abiertas y muy legible en mobile. Se usa en tres pesos (400 / 500 / 600) y nada más. Titulares en 600 con tracking negativo fuerte; cuerpo en 400 a 1.55.</p>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: clamp(34px, 5vw, 58px); line-height: 1; font-style: italic;">Instrument Serif</p>
+        <p style="margin: 10px 0 28px; font-size: 15px; line-height: 1.55; color: #35362B; max-width: 60ch;">Voz editorial, sólo para frases de remo y para el tramo de visión. Aparece cinco o seis veces en toda la página: si aparece más, pierde el efecto de subrayado.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 20px; letter-spacing: 0.02em;">IBM Plex Mono</p>
+        <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.55; color: #35362B; max-width: 60ch;">Etiquetas, fechas, ciudades, numeración y metadatos. Es la dosis maker: pequeña, funcional, nunca decorativa.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px;">
+        <div>
+          <div style="height: 112px; background: #F6F4EF; border: 1px solid rgba(21,22,15,0.12);"></div>
+          <p style="margin: 10px 0 2px; font-size: 14px; font-weight: 500;">Papel</p>
+          <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">#F6F4EF</p>
+        </div>
+        <div>
+          <div style="height: 112px; background: #15160F;"></div>
+          <p style="margin: 10px 0 2px; font-size: 14px; font-weight: 500;">Tinta</p>
+          <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">#15160F</p>
+        </div>
+        <div>
+          <div style="height: 112px; background: #1F6F5C;"></div>
+          <p style="margin: 10px 0 2px; font-size: 14px; font-weight: 500;">Corriente</p>
+          <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">oklch(.52 .09 165)</p>
+        </div>
+        <div>
+          <div style="height: 112px; background: #A8562F;"></div>
+          <p style="margin: 10px 0 2px; font-size: 14px; font-weight: 500;">Barranca</p>
+          <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">oklch(.52 .09 45)</p>
+        </div>
+      </div>
+      <p style="margin: -18px 0 0; font-size: 15px; line-height: 1.6; color: #35362B; max-width: 68ch;">Dos acentos con la misma luminosidad y croma, sólo distinta tonalidad: uno para lo que fluye y conecta, otro para lo que empuja y señala. Nunca juntos en el mismo elemento. Sin gradientes, sin violetas, sin glass. El color aparece en el 5% de la superficie: un dato, una línea, un estado activo.</p>
+
+      <div style="display: grid; gap: 18px;">
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6C60;">Composición, formas y ritmo</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35362B; max-width: 68ch;">Grilla de 12 columnas que se usa asimétricamente: bloques de texto anclados a izquierda, evidencia desbordando hacia la derecha. Nada centrado salvo el hero y el cierre. Bordes de 1px en lugar de sombras; radios de 2px o rectos, jamás pastillas redondeadas. Un solo elemento por sección puede sangrar a pantalla completa.</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35362B; max-width: 68ch;">El ritmo alterna densidad y aire: hero muy vacío, personas muy denso, visión otra vez casi vacío y en negativo, eventos denso, cierre vacío. Esa respiración es lo que hace que la página se sienta recorrida y no scrolleada.</p>
+        <div style="display: flex; align-items: flex-end; gap: 3px; height: 64px; padding: 18px 0 0;">
+          <div style="width: 6px; height: 18%; background: #15160F;"></div>
+          <div style="width: 6px; height: 30%; background: #15160F;"></div>
+          <div style="width: 6px; height: 22%; background: #15160F;"></div>
+          <div style="width: 6px; height: 46%; background: #15160F;"></div>
+          <div style="width: 6px; height: 62%; background: #15160F;"></div>
+          <div style="width: 6px; height: 40%; background: #15160F;"></div>
+          <div style="width: 6px; height: 26%; background: #15160F;"></div>
+          <div style="width: 6px; height: 78%; background: #1F6F5C;"></div>
+          <div style="width: 6px; height: 96%; background: #1F6F5C;"></div>
+          <div style="width: 6px; height: 70%; background: #1F6F5C;"></div>
+          <div style="width: 6px; height: 34%; background: #15160F;"></div>
+          <div style="width: 6px; height: 20%; background: #15160F;"></div>
+          <div style="width: 6px; height: 52%; background: #15160F;"></div>
+          <div style="width: 6px; height: 84%; background: #A8562F;"></div>
+          <div style="width: 6px; height: 28%; background: #15160F;"></div>
+          <div style="width: 6px; height: 16%; background: #15160F;"></div>
+        </div>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">Trazos verticales: el motivo gráfico único. Cada trazo es un impulso individual; juntos forman corriente. Sirven de separador, de barra de progreso y de textura de fondo, y nunca dibujan un remo ni un río.</p>
+      </div>
+
+      <div style="display: grid; gap: 14px;">
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6C60;">Fotografía</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+          <div style="aspect-ratio: 4/5; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.12); display: flex; align-items: flex-end; padding: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">manos sobre un prototipo</span>
+          </div>
+          <div style="aspect-ratio: 4/5; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.12); display: flex; align-items: flex-end; padding: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">tres personas discutiendo en un pizarrón</span>
+          </div>
+          <div style="aspect-ratio: 4/5; background: repeating-linear-gradient(135deg, #EDEAE3 0 8px, #F6F4EF 8px 16px); border: 1px solid rgba(21,22,15,0.12); display: flex; align-items: flex-end; padding: 14px;">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6C60;">taller de noche, máquina encendida</span>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #35362B; max-width: 68ch;">Documental, sin pose, luz real, algo de grano. Encuadres cerrados sobre manos, objetos y caras concentradas. Cero fotos de auditorio, cero apretones de mano, cero stock. Mientras no haya material, van estos marcadores rayados con la leyenda de lo que falta: dejan la página honesta y presentable a la vez.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">E</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Sistema de movimiento</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Siete gestos. Cada uno significa algo; el resto del sitio está quieto.</p>
+    </div>
+    <div style="display: grid; gap: 0;">
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">1 · Dos corrientes que convergen</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">En el hero, dos hileras de palabras entran desde bordes opuestos y se alinean en una sola línea. Dura 900ms y no se repite.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #1F6F5C;">talento y problemas existen por separado hasta que alguien los cruza</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">2 · La remada del scroll</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">El indicador de progreso no avanza lineal: pega un tirón al entrar en cada sección y después planea. Es una línea de 2px, no un aro ni un porcentaje.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #1F6F5C;">avanzar es palada y deslizamiento, no velocidad constante</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">3 · El match</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">En la sección del mecanismo, una necesidad y una capacidad se acercan y una línea fina se dibuja entre las dos; al completarse, ambas tarjetas se asientan juntas. Se dispara al entrar en viewport y con hover/tap.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #1F6F5C;">el valor de REMO es el instante de la conexión</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">4 · Muchos empujes chicos</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">En “participar no compromete tu vida”, cada ítem que la persona toca suma un trazo a una banda; con pocos trazos un bloque grande se mueve apenas, con muchos se desplaza notablemente. Interacción, no autoplay.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #A8562F;">cuanta más gente rema, menos esfuerzo pone cada uno</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">5 · Contra la corriente</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Sólo en el tramo de visión, la textura de trazos del fondo se desplaza en sentido opuesto al scroll, muy leve (8px máximo). Genera una incomodidad mínima y deliberada.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #A8562F;">construir acá es ir contra algo</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">6 · Entrada de las personas</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Las tarjetas aparecen con desfase de 60ms y un recorrido corto (12px, 240ms). Nunca fades largos ni zooms: la gente llega, no se materializa.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #1F6F5C;">van llegando de a uno</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 28px; padding: 24px 0; border-top: 1px solid rgba(21,22,15,0.15); border-bottom: 1px solid rgba(21,22,15,0.15); align-items: start;">
+        <div>
+          <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">7 · Tu remada</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #35362B;">Cada respuesta del onboarding suma un trazo a un indicador chico y fijo (abajo en mobile, al costado en desktop). Al llegar al cierre, esos trazos se convierten en el resumen de respuestas.</p>
+        </div>
+        <p style="margin: 0; font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic; color: #1F6F5C;">ya venís remando</p>
+      </div>
+
+      <p style="margin: 22px 0 0; font-size: 15px; line-height: 1.6; color: #6B6C60; max-width: 68ch;">Reglas duras: todo transición entre 180 y 900ms, curvas de salida (nunca bounce), nada se mueve en loop infinito, ningún contenido depende de una animación para leerse, y con <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">prefers-reduced-motion</span> todo pasa a estado final instantáneo. Presupuesto: ninguna animación de scroll que cueste más que un transform.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">F</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Onboarding progresivo</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Tres preguntas repartidas, un cierre de tres campos.</p>
+    </div>
+    <div style="display: grid; gap: 20px;">
+
+      <div style="background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12); padding: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">PREGUNTA 1 · al final de “las personas”</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">selección única</span>
+        </div>
+        <h3 style="margin: 0 0 6px; font-size: clamp(24px, 3vw, 32px); font-weight: 600; letter-spacing: -0.02em;">¿Y vos, qué hacés?</h3>
+        <p style="margin: 0 0 18px; font-size: 15px; color: #6B6C60;">Sin campos, sin mail. Un toque y sigue el scroll solo.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Estudio</span>
+          <span style="padding: 9px 15px; border: 1px solid #1F6F5C; background: #1F6F5C; color: #F6F4EF; font-size: 15px;">Construyo cosas</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Tengo una empresa</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Diseño</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Investigo</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Emprendo</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Sector público</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Tengo una idea</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Me interesa nomás</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Otra cosa</span>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.5; color: #35362B;">Al responder, la sección devuelve algo inmediato: <span style="font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic;">“Hay 14 personas acá que construyen cosas.”</span> Recompensa antes que pedido.</p>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12); padding: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">PREGUNTA 2 · después del mecanismo</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">hasta 2 opciones</span>
+        </div>
+        <h3 style="margin: 0 0 6px; font-size: clamp(24px, 3vw, 32px); font-weight: 600; letter-spacing: -0.02em;">¿Qué te gustaría que pase?</h3>
+        <p style="margin: 0 0 18px; font-size: 15px; color: #6B6C60;">Ahora que viste cómo se conectan las cosas, la pregunta tiene sentido.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Encontrar gente para un proyecto</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Aprender</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Conseguir trabajo</span>
+          <span style="padding: 9px 15px; border: 1px solid #1F6F5C; background: #1F6F5C; color: #F6F4EF; font-size: 15px;">Encontrar talento</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Armar una startup</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Resolver un problema</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Conocer gente interesante</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Ayudar a otros</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Mostrar algo que estoy haciendo</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Todavía no sé</span>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12); padding: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px;">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">PREGUNTA 3 · después de eventos</span>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">múltiple</span>
+        </div>
+        <h3 style="margin: 0 0 6px; font-size: clamp(24px, 3vw, 32px); font-weight: 600; letter-spacing: -0.02em;">¿A cuáles vendrías?</h3>
+        <p style="margin: 0 0 18px; font-size: 15px; color: #6B6C60;">Es la pregunta más fácil de todas y la que más nos sirve para programar.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="padding: 9px 15px; border: 1px solid #1F6F5C; background: #1F6F5C; color: #F6F4EF; font-size: 15px;">Encuentros informales</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Workshops</span>
+          <span style="padding: 9px 15px; border: 1px solid #1F6F5C; background: #1F6F5C; color: #F6F4EF; font-size: 15px;">Hackathons</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Demo nights</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Visitas a empresas</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Proyectos comunitarios</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Charlas</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Maker nights</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Cenas</span>
+          <span style="padding: 9px 15px; border: 1px solid rgba(21,22,15,0.25); font-size: 15px;">Desafíos técnicos</span>
+        </div>
+      </div>
+
+      <div style="background: #15160F; color: #F6F4EF; padding: 32px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E0A87C;">CIERRE · sección 08</span>
+        <h3 style="margin: 14px 0 8px; font-size: clamp(30px, 4vw, 44px); font-weight: 600; letter-spacing: -0.03em;">¿Remamos?</h3>
+        <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.55; color: rgba(246,244,239,0.75); max-width: 46ch;">Ya sabemos un poco de vos. Ahora contanos cómo encontrarte.</p>
+        <div style="display: grid; gap: 8px; font-size: 16px; line-height: 1.6; padding: 18px 0; border-top: 1px solid rgba(246,244,239,0.2); border-bottom: 1px solid rgba(246,244,239,0.2); margin-bottom: 22px;">
+          <p style="margin: 0;"><span style="color: rgba(246,244,239,0.55);">Sos:</span> alguien que construye cosas <span style="color: rgba(246,244,239,0.35); font-size: 14px;">editar</span></p>
+          <p style="margin: 0;"><span style="color: rgba(246,244,239,0.55);">Buscás:</span> encontrar talento <span style="color: rgba(246,244,239,0.35); font-size: 14px;">editar</span></p>
+          <p style="margin: 0;"><span style="color: rgba(246,244,239,0.55);">Te copan:</span> encuentros informales + hackathons <span style="color: rgba(246,244,239,0.35); font-size: 14px;">editar</span></p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 18px;">
+          <div style="border-bottom: 1px solid rgba(246,244,239,0.35); padding-bottom: 8px; color: rgba(246,244,239,0.5); font-size: 15px;">Nombre</div>
+          <div style="border-bottom: 1px solid rgba(246,244,239,0.35); padding-bottom: 8px; color: rgba(246,244,239,0.5); font-size: 15px;">Ciudad</div>
+          <div style="border-bottom: 1px solid rgba(246,244,239,0.35); padding-bottom: 8px; color: rgba(246,244,239,0.5); font-size: 15px;">Mail o WhatsApp</div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(246,244,239,0.75); max-width: 60ch;">Confirmación: <span style="font-family: 'Instrument Serif', serif; font-size: 20px; font-style: italic; color: #F6F4EF;">“Listo. Nos vemos en la próxima.”</span> Más la fecha del próximo encuentro y nada más. Sin “bienvenido a bordo”, sin pantalla de agradecimiento genérica.</p>
+      </div>
+
+      <div style="display: grid; gap: 10px; padding: 8px 0 0;">
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6C60;">Reglas del onboarding</p>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #35362B; max-width: 68ch;">Una sola pregunta por sección y nunca dos pantallas seguidas. Todo es opcional y saltable sin fricción, sin asteriscos ni validaciones. Las respuestas viven en <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px;">sessionStorage</span> y son editables desde el cierre. Cada respuesta devuelve algo (un dato, una persona, un evento), porque si no devuelve nada es un formulario disfrazado. El bloque de pregunta ocupa el ancho de la lectura, no una pantalla completa: la persona no siente interrupción, siente conversación. En mobile los chips son de 44px de alto mínimo, envuelven en dos o tres filas y no hay scroll horizontal escondido.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">G</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Seis heros</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Seis apuestas distintas, no seis titulares del mismo concepto.</p>
+    </div>
+    <div style="display: grid; gap: 16px;">
+
+      <div style="border: 1px solid rgba(21,22,15,0.12); background: #FFFFFF;">
+        <div style="padding: 34px 30px; border-bottom: 1px solid rgba(21,22,15,0.12);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">H1 · LA AFIRMACIÓN</span>
+          <p style="margin: 16px 0 0; font-size: clamp(28px, 4vw, 46px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600;">Talento hay.<br />Problemas también.<br />Hagamos que se encuentren.</p>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Tipográfico puro sobre papel. Las dos primeras líneas entran desde lados opuestos y la tercera aparece cuando se alinean. Apuesta: la tesis es tan clara que no necesita nada más. Riesgo: sin movimiento queda plano. Es el más sólido y el más seguro.</p>
+        </div>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.12); background: #FFFFFF;">
+        <div style="padding: 34px 30px; border-bottom: 1px solid rgba(21,22,15,0.12);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">H2 · EL MURO DE LO QUE HACE FALTA</span>
+          <p style="margin: 16px 0 18px; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 600; max-width: 24ch;">Esto es lo que la gente del Litoral está pidiendo hoy.</p>
+          <div style="display: grid; gap: 8px; max-width: 640px;">
+            <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border: 1px solid rgba(21,22,15,0.18); font-size: 15px;"><span>“Necesito alguien que sepa LoRa.”</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">Paraná</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border: 1px solid rgba(21,22,15,0.18); font-size: 15px;"><span>“Tenemos una CNC libre dos tardes por semana.”</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">Santa Fe</span></div>
+            <div style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border: 1px solid #1F6F5C; font-size: 15px;"><span>“Busco diseñador para probar una idea.”</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #1F6F5C;">Rosario</span></div>
+          </div>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Evidencia como primera pantalla: el titular es chico y lo que manda son frases reales, con ciudad. Apuesta: nada convence más rápido que ver actividad. Riesgo: exige tener siempre pedidos frescos, si no envejece a la vista.</p>
+        </div>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.12); background: #FFFFFF;">
+        <div style="padding: 34px 30px; border-bottom: 1px solid rgba(21,22,15,0.12);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">H3 · LA PREGUNTA PRIMERO</span>
+          <p style="margin: 16px 0 16px; font-size: clamp(28px, 4vw, 46px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 600; max-width: 22ch;">¿Qué estás tratando de sacar adelante?</p>
+          <div style="max-width: 520px; border-bottom: 2px solid #15160F; padding-bottom: 10px; color: #6B6C60; font-size: 17px;">escribilo en una línea</div>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">El onboarding empieza en el segundo cero y lo que la persona escribe reordena el resto de la página (qué personas y qué eventos ve primero). Apuesta: máxima implicación y máxima personalización. Riesgo: pedir antes de dar; hay que dejar el campo claramente salteable.</p>
+        </div>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.12); background: #FFFFFF;">
+        <div style="padding: 34px 30px; border-bottom: 1px solid rgba(21,22,15,0.12);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">H4 · LA LISTA DE GENTE</span>
+          <p style="margin: 16px 0 16px; font-size: clamp(24px, 3vw, 34px); line-height: 1.08; letter-spacing: -0.025em; font-weight: 600; max-width: 26ch;">Acá está la gente que puede ayudarte a hacer eso que querés hacer.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 16px; color: #35362B;">
+            <span>Lucía · diseñadora industrial</span>
+            <span style="color: #A8562F;">Martín · metalúrgico</span>
+            <span>Juana · estudiante</span>
+            <span>Andrés · electrónica</span>
+            <span style="color: #1F6F5C;">Sofía · gestión pública</span>
+            <span>+ 140</span>
+          </div>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">El hero es un censo. Nombres, oficios y un contador que crece. Apuesta: la variedad humana es el activo, así que se muestra primero. Riesgo: se parece a un directorio y necesita fotos o el conteo se siente flojo al principio.</p>
+        </div>
+      </div>
+
+      <div style="background: #15160F; color: #F6F4EF; border: 1px solid #15160F;">
+        <div style="padding: 40px 30px; border-bottom: 1px solid rgba(246,244,239,0.15);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E0A87C;">H5 · EDITORIAL / DESDE ESTA ORILLA</span>
+          <p style="margin: 18px 0 0; font-family: 'Instrument Serif', serif; font-size: clamp(32px, 5vw, 58px); line-height: 1.04; max-width: 24ch;">Las cosas interesantes también pueden pasar de este lado del río.</p>
+          <p style="margin: 18px 0 0; font-size: 16px; color: rgba(246,244,239,0.7); max-width: 46ch;">Y no vamos a esperar que alguien nos dé permiso. REMO conecta personas, proyectos y recursos para que pase.</p>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: rgba(246,244,239,0.75);">Una sola frase, en negativo, con la voz editorial al frente. Apuesta: emoción y postura antes que función; genera pertenencia inmediata. Riesgo: es el más cerca de sonar a movimiento o a manifiesto; conviene reservarlo para la sección de visión si suena grande.</p>
+        </div>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.12); background: #FFFFFF;">
+        <div style="padding: 34px 30px; border-bottom: 1px solid rgba(21,22,15,0.12);">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">H6 · LA CORRIENTE</span>
+          <div style="display: flex; align-items: center; gap: 3px; height: 90px; margin: 20px 0 18px;">
+            <div style="width: 4px; height: 22%; background: rgba(21,22,15,0.35);"></div>
+            <div style="width: 4px; height: 40%; background: rgba(21,22,15,0.45);"></div>
+            <div style="width: 4px; height: 30%; background: rgba(21,22,15,0.4);"></div>
+            <div style="width: 4px; height: 58%; background: #1F6F5C;"></div>
+            <div style="width: 4px; height: 72%; background: #1F6F5C;"></div>
+            <div style="width: 4px; height: 46%; background: #1F6F5C;"></div>
+            <div style="width: 4px; height: 88%; background: #15160F;"></div>
+            <div style="width: 4px; height: 100%; background: #15160F;"></div>
+            <div style="width: 4px; height: 66%; background: #15160F;"></div>
+            <div style="width: 4px; height: 38%; background: #A8562F;"></div>
+            <div style="width: 4px; height: 24%; background: rgba(21,22,15,0.4);"></div>
+            <div style="width: 4px; height: 14%; background: rgba(21,22,15,0.3);"></div>
+          </div>
+          <p style="margin: 0; font-size: clamp(24px, 3.2vw, 38px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 600; max-width: 24ch;">Muchos empujes chicos mueven cosas grandes.</p>
+        </div>
+        <div style="padding: 22px 30px;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Gráfico primero: una banda de trazos donde cada trazo es una persona y el conjunto avanza. Apuesta: identidad visual propia desde el primer scroll, sin iconografía náutica. Riesgo: abstracto; el titular tiene que aterrizarlo o queda decorativo.</p>
+        </div>
+      </div>
+
+      <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.65; color: #35362B; max-width: 68ch;">Mi recomendación: <strong style="font-weight: 600;">H1 como base, con el gesto de H6</strong> — la afirmación de las tres líneas convergiendo, y la banda de trazos como firma gráfica debajo. H2 y H4 son mejores como sección 03 y 02 respectivamente, y H5 es el tramo de visión. H3 lo probaría como test más adelante, cuando haya suficiente contenido para que la personalización se note.</p>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">H</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Momentos memorables</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Cinco detalles para contar en un asado.</p>
+    </div>
+    <div style="display: grid; gap: 16px;">
+      <div style="padding: 24px 26px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">El match que se arma solo</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Elegís una necesidad del muro y la página busca, entre las personas reales del sitio, quién podría resolverla: dos tarjetas se acercan y queda una línea entre ellas. Es el mecanismo REMO en cuatro segundos, jugable.</p>
+      </div>
+      <div style="padding: 24px 26px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">Tu remada</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">El indicador que va sumando trazos con cada respuesta y que al final se transforma, literalmente, en el resumen de quién sos. La persona ve que lo que dijo no se perdió.</p>
+      </div>
+      <div style="padding: 24px 26px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">La palanca colectiva</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">En “participar no compromete tu vida”, cada gesto que tocás mueve un bloque grande un poco más. Sola no lo movés; con quince toques se desplaza entero. La tesis de la comunidad, en una interacción.</p>
+      </div>
+      <div style="padding: 24px 26px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">Frases de remo escondidas</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Cinco líneas en serif italic repartidas en toda la página, en lugares donde no se esperan: al final de una lista, al costado de un evento, en el pie. <span style="font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic;">“Remar solo cuesta más.”</span> Nunca dos en la misma pantalla.</p>
+      </div>
+      <div style="padding: 24px 26px; background: #FFFFFF; border: 1px solid rgba(21,22,15,0.12);">
+        <h3 style="margin: 0 0 6px; font-size: 19px; font-weight: 600;">El cierre que ya te conoce</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #35362B;">Llegar al final y encontrar tres líneas que te describen sin que hayas llenado nada, con la fecha del próximo encuentro al lado del botón. Convierte el formulario en un apretón de manos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">I</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Wireframe</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">La landing completa, de arriba a abajo, con la nota de mobile.</p>
+    </div>
+    <div style="display: grid; gap: 12px; font-size: 15px;">
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">00 · BARRA</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">REMO a la izquierda. A la derecha: Eventos · Personas · <span style="border-bottom: 1px solid #1F6F5C;">Sumarse</span>. Línea de progreso de 2px pegada al borde inferior. Se oculta al bajar y vuelve al subir.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: sólo logo + “Sumarse”; el resto en menú.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">01 · HERO — 90vh</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Tres líneas grandes: <strong style="font-weight: 600;">Talento hay. / Problemas también. / Hagamos que se encuentren.</strong> Debajo, una bajada de una línea: “REMO conecta personas, proyectos, conocimiento y recursos para que pasen más cosas desde el Litoral.” Después la banda de trazos, y abajo “Conocé REMO ↓”. Al pie del bloque, en mono: Paraná · Santa Fe · Rosario · y la región.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: titular a 40px, tres líneas garantizadas; banda de trazos reducida a 60px de alto.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">02 · LAS PERSONAS</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Título corto: “Mirá quién anda por acá.” Grilla irregular de 8–10 tarjetas (2 columnas desktop, alturas distintas): foto o marcador rayado, nombre, oficio en mono, y una línea de intención (“Quiere encontrar gente para construir dispositivos accesibles”). Entre ellas, dos tarjetas de sólo texto con frases de gente. Al final, bloque de <strong style="font-weight: 600;">Pregunta 1</strong> y su respuesta inmediata.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: carrusel horizontal con snap, 1.15 tarjetas a la vista; nunca acordeón.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">03 · LO QUE PASA CUANDO SE ENCUENTRAN</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Dos columnas enfrentadas: izquierda “Lo que hace falta”, derecha “Lo que hay”. Tocás un ítem de un lado y se traza la línea al del otro lado, con un texto chico que cuenta el final (“así arrancó el sensor de nivel del arroyo”). Debajo, la cadena del mecanismo en cinco pasos horizontales: problema → alguien conoce a alguien → aparece quien sabe → se arma → lo mostramos. Cierra con <strong style="font-weight: 600;">Pregunta 2</strong>.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: las columnas se apilan y la línea se dibuja en vertical; la cadena pasa a lista numerada.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">04 · HISTORIAS QUE YA PASARON</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Dos o tres casos a ancho completo: foto grande, tres líneas de relato y los nombres de quienes participaron. Sin métricas infladas ni “casos de éxito”. Si hay una sola historia real, va una sola, grande.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: foto arriba, texto abajo, sin recortes verticales agresivos.</p>
+      </div>
+
+      <div style="border: 1px solid #15160F; padding: 22px 24px; background: #15160F; color: #F6F4EF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E0A87C;">05 · QUÉ QUEREMOS LOGRAR — fondo tinta</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: rgba(246,244,239,0.8);">Frase editorial en serif: “Las cosas interesantes también pueden pasar de este lado del río.” Debajo, una lista vertical de verbos en grande: encontrar talento / crear cosas / probar ideas / conseguir ayuda / emprender / aprender / colaborar. Cierra: “Y que las mejores personas no tengan que irse para encontrar un ecosistema extraordinario.” Fondo con trazos que se mueven contra el scroll.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(246,244,239,0.5);">mobile: verbos a 28px, uno por línea; es la sección más vertical del sitio.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">06 · LO QUE ESTÁ PASANDO</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Cartelera: una fila por evento — fecha en mono, tipo (hackathon, maker night, visita), título, ciudad, y estado (“quedan lugares” / “pasó”). Los que ya pasaron se ven en gris con foto al hover: prueba de que hay historia. Cierra con <strong style="font-weight: 600;">Pregunta 3</strong>.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: la fila se vuelve bloque de dos líneas; fecha y ciudad arriba, título abajo. Todo tocable, 56px de alto.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">07 · NO HACE FALTA COMPROMETER TU VIDA</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">Título: “Participar puede ser muy poco.” Lista de gestos tocables: venir a algo / ayudar a alguien / proponer una idea / prestar una herramienta / contar lo que sabés / conectar dos personas / aparecer. Cada toque suma un trazo y desplaza el bloque de la derecha. Remate en serif: <span style="font-family: 'Instrument Serif', serif; font-size: 18px; font-style: italic;">“Muchos empujes chicos mueven cosas grandes.”</span></p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6C60;">mobile: la lista arriba, el bloque que se mueve abajo y visible mientras se toca.</p>
+      </div>
+
+      <div style="border: 1px solid #15160F; padding: 22px 24px; background: #15160F; color: #F6F4EF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #E0A87C;">08 · ¿REMAMOS? — fondo tinta</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: rgba(246,244,239,0.8);">Titular “¿Remamos?”, dos líneas de contexto, el resumen editable de las tres respuestas, y tres campos: nombre, ciudad, contacto. Botón “Listo”. Debajo, chico: “No mandamos newsletters. Te escribimos cuando hay algo cerca tuyo.” Al enviar, la misma sección se reemplaza por la confirmación y la fecha del próximo encuentro.</p>
+        <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: rgba(246,244,239,0.5);">mobile: campos apilados, botón de ancho completo y pegado al pulgar; teclado no tapa el resumen.</p>
+      </div>
+
+      <div style="border: 1px solid rgba(21,22,15,0.2); padding: 22px 24px; background: #FFFFFF;">
+        <p style="margin: 0 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A8562F;">09 · PIE</p>
+        <p style="margin: 0 0 8px; line-height: 1.6; color: #35362B;">“REMO — Red de Emprendedores y Makers de las Orillas.” Dos líneas de qué es. Ciudades. Canales de contacto. Una última frase en serif. Nada más: acá vive lo institucional que arriba estorbaría.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; padding: 96px 0 0; align-items: start;">
+    <div style="position: sticky; top: 32px;">
+      <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">J</p>
+      <h2 style="margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 600;">Riesgos</h2>
+      <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.5; color: #6B6C60;">Qué decisión concreta nos haría parecer otra cosa, y la regla que lo evita.</p>
+    </div>
+    <div style="display: grid; gap: 0;">
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Institucional</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">Poner misión/visión/valores, logos de instituciones arriba, autoridades, o hablar en tercera persona (“REMO es una organización que…”).</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: primera persona del plural, cero organigrama, los logos sólo si hay algo concreto hecho con ellos y siempre abajo.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Startup</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">Hero con dos botones y captura de mail, “features” en tres columnas con iconos, contadores de vanidad, tarjetas con sombra y esquinas redondeadas.</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: un solo CTA por pantalla y suave, nada de iconos genéricos, bordes de 1px en vez de sombras, y ningún número que no sea verificable.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Adolescente</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">Emojis, colores flúo, stickers, tipografía deformada, copy con demasiada joda, animaciones rebotando.</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: la informalidad va en el lenguaje (voseo, frases cortas), nunca en la forma. Cero emojis. Curvas de salida, sin bounce.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Hacker</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">Monoespaciada como tipografía principal, fondo oscuro por defecto, verde terminal, cursores parpadeando, jerga técnica en el hero.</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: la mono ocupa menos del 5% del texto y sólo en metadatos. Fondo claro por defecto; el oscuro es acento de dos secciones. Nada de LoRa ni siglas en el titular.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Política</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">Celeste y blanco, sol, mapa argentino, puños, “movimiento”, “militar”, tipografía de afiche gritada, primeras personas del singular carismáticas.</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: el orgullo se expresa con lugares y personas concretas, no con símbolos patrios. Ninguna paleta nacional. La palabra que usamos es “hacer”, no “luchar”.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr); gap: 24px; padding: 20px 0; border-top: 1px solid rgba(21,22,15,0.15); border-bottom: 1px solid rgba(21,22,15,0.15); font-size: 15px;">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #A8562F;">Genérica</span>
+        <p style="margin: 0; line-height: 1.55; color: #35362B;">El riesgo más probable: sin fotos y sin datos reales, queda una tipografía linda sobre fondo crema que podría ser de cualquiera.</p>
+        <p style="margin: 0; line-height: 1.55; color: #6B6C60;">Regla: en cada sección tiene que haber al menos un dato específico e imposible de copiar — un nombre, una ciudad, una fecha, una frase textual. La especificidad es la identidad.</p>
+      </div>
+
+      <p style="margin: 26px 0 0; font-size: 16px; line-height: 1.65; color: #35362B; max-width: 68ch;">Y un riesgo que no estaba en la lista: <strong style="font-weight: 600;">parecer más grande de lo que es.</strong> Si el sitio promete un ecosistema y alguien viene a un encuentro de ocho personas, se rompe la confianza. La escala real se muestra sin disculparse: pocas historias, bien contadas, con nombre y apellido.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 110px; padding: 44px 0 0; border-top: 1px solid #15160F; display: grid; gap: 18px;">
+    <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #A8562F;">Próximo paso</p>
+    <p style="margin: 0; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.2; letter-spacing: -0.02em; font-weight: 600; max-width: 30ch;">Si esto cierra, sigo con el sistema de diseño y después el HTML.</p>
+    <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #35362B; max-width: 68ch;">Lo que necesito de tu lado para que la página no quede genérica: cinco a diez personas reales con nombre, oficio y una línea de qué buscan; diez frases textuales de necesidades y recursos; dos o tres eventos con fecha; una historia con final; y las fotos que existan, aunque sean de celular.</p>
+    <p style="margin: 6px 0 0; font-family: 'Instrument Serif', serif; font-size: 26px; font-style: italic;">Desde esta orilla también se construye futuro.</p>
+  </div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

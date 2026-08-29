@@ -1,0 +1,282 @@
+.site-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.1rem, 2.8vw, 3rem);
+  font-size: var(--text-sm);
+}
+
+.main-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-cta {
+  padding-inline: 0.9rem;
+  border: 1px solid var(--ink);
+}
+
+.menu-toggle {
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+  border: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.primary-link,
+.text-link {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 500;
+}
+
+.primary-link {
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.primary-link:hover {
+  background: var(--current);
+}
+
+.text-link {
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.field em {
+  color: color-mix(in srgb, var(--paper) 55%, transparent);
+  font-style: normal;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.75rem 0;
+  resize: vertical;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line-on-dark);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.45;
+  text-transform: none;
+}
+
+.field textarea {
+  min-height: 92px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-bottom-color: var(--current-light);
+}
+
+.field small {
+  min-height: 1em;
+  color: var(--bank-light);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.submit-button {
+  display: flex;
+  width: 100%;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+  padding: 0.9rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.submit-button:hover {
+  background: var(--current-light);
+  border-color: var(--current-light);
+}
+
+.privacy-note,
+.form-status {
+  font-size: var(--text-xs);
+}
+
+.privacy-note {
+  margin: var(--space-3) 0 0;
+  color: color-mix(in srgb, var(--paper) 64%, transparent);
+}
+
+.form-status {
+  min-height: 1.4em;
+  margin: var(--space-2) 0 0;
+  color: var(--bank-light);
+}
+
+/* PLACEHOLDER: se va junto con enviarInscripcion() cuando haya backend. */
+.pending-note {
+  margin: var(--space-4) 0 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px dashed var(--line-on-dark);
+  color: color-mix(in srgb, var(--paper) 60%, transparent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.45;
+}
+
+.join-done-title {
+  margin: 0;
+  color: var(--current-light);
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 1.4rem + 2vw, 2.9rem);
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.join-done-note {
+  max-width: 34ch;
+  margin: var(--space-3) 0 0;
+  color: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.join-done:focus {
+  outline: none;
+}
+
+/* Chips de las preguntas */
+.chip-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  text-align: left;
+  transition: background-color 160ms ease-out, color 160ms ease-out, border-color 160ms ease-out;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--current);
+  border-color: var(--current);
+  color: var(--paper);
+}
+
+.chip[aria-disabled="true"] {
+  opacity: 0.45;
+}
+
+.question-block {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.question-step {
+  margin-bottom: var(--space-1);
+  color: var(--bank);
+}
+
+.question-block h3 {
+  margin-bottom: var(--space-4);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.question-block h3:has(+ .question-hint) {
+  margin-bottom: 0;
+}
+
+.question-hint {
+  margin: var(--space-1) 0 var(--space-4);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+.question-echo {
+  margin: var(--space-4) 0 0;
+  color: var(--current);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);
+  font-style: italic;
+}
+
+.mono-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
