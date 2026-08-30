@@ -5,346 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="REMO es una red del Litoral para que quien necesita una mano encuentre a quien puede darla."
-    />
-    <meta name="theme-color" content="#f6f4ef" />
+      content="REMO — Red de Emprendedores y Makers de las Orillas. Muy pronto, un lugar para encontrarnos, construir y compartir." />
+    <meta name="theme-color" content="#f4f1e9" />
     <title>REMO — Red de Emprendedores y Makers de las Orillas</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2315160f'/%3E%3Cpath d='M18 49V15h15c9 0 14 5 14 13 0 6-3 10-8 12l9 9H37l-8-8h-2v8H18Zm9-17h6c3 0 5-2 5-5s-2-4-5-4h-6v9Z' fill='%23f6f4ef'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/tokens.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/sections.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/motion.css" />
+      rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/coming-soon.css" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header">
-      <div class="header-inner shell">
-        <a class="brand" href="#inicio" aria-label="REMO, volver al inicio">REMO</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
-          Menú
-        </button>
-        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-          <a href="#personas">Personas</a>
-          <a href="#eventos">Eventos</a>
-          <a class="nav-cta" href="#sumarse">Sumarme</a>
-        </nav>
-      </div>
+      <a class="brand" href="/" aria-label="REMO, inicio">REMO</a>
+      <p class="header-note">Desde las orillas del Litoral</p>
     </header>
 
-    <main id="contenido">
-      <section id="inicio" class="hero" data-section="Inicio">
-        <div class="hero-current" aria-hidden="true" data-current-band></div>
-        <div class="hero-inner shell">
+    <main id="contenido" class="coming-soon">
+      <div class="current" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="status-line">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p>Red en construcción</p>
+          <p class="status-number">01 — Próximamente</p>
+        </div>
+
+        <div class="hero-grid">
           <div class="hero-copy">
-            <h1 class="hero-title">
-              <span>Remarla solo</span>
-              <span class="hero-title-final">cuesta más.</span>
+            <p class="eyebrow">Nos estamos encontrando</p>
+            <h1 id="hero-title">
+              <span class="hero-name">REMO</span>
+              <span class="hero-tagline">Red de Emprendedores y Makers</span>
+              <span class="hero-tagline hero-tagline-serif">de las Orillas.</span>
             </h1>
-            <p class="hero-intro">
-              REMO es una red del Litoral para que quien necesita una mano encuentre a quien puede darla.
+          </div>
+
+          <div class="hero-aside">
+            <p class="intro">
+              Estamos preparando un espacio para conectar personas, ideas y proyectos
+              que nacen cerca del río.
             </p>
-            <div class="hero-actions">
-              <a class="primary-link" href="#personas">Mirá quién anda por acá <span aria-hidden="true">↓</span></a>
-            </div>
+            <p class="aside-note">
+              La web está tomando forma.<br />La red ya empezó a moverse.
+            </p>
+            <a class="cowork-link" href="/cowork">
+              <span>Conocé la próxima juntada</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
-        </div>
-      </section>
-
-      <!--
-        PLACEHOLDER: las personas de abajo son de muestra, tomadas del documento de
-        concepto. Reemplazar por integrantes reales del grupo (nombre, oficio, ciudad,
-        qué busca) y cambiar los marcadores "FOTO — …" por fotos reales.
-      -->
-      <section id="personas" class="section section-people" data-section="Personas">
-        <div class="shell">
-          <div class="section-heading section-heading-row">
-            <h2>Mirá quién anda por acá.</h2>
-          </div>
-
-          <div class="people-grid">
-            <article class="person-card">
-              <div class="person-photo" aria-hidden="true"><span>FOTO — Lucía</span></div>
-              <div class="person-body">
-                <h3>Lucía</h3>
-                <p class="person-role">Diseñadora industrial · Paraná</p>
-                <p class="person-intent">Quiere encontrar gente para construir dispositivos accesibles.</p>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <div class="person-photo" aria-hidden="true"><span>FOTO — Martín</span></div>
-              <div class="person-body">
-                <h3>Martín</h3>
-                <p class="person-role">Empresario metalúrgico · Santa Fe</p>
-                <p class="person-intent">Tiene procesos que todavía se resuelven a mano y sabe que se puede mejor.</p>
-              </div>
-            </article>
-
-            <blockquote class="person-quote">
-              <p>“Vine sin saber a qué venía y me fui con dos socios.”</p>
-            </blockquote>
-
-            <article class="person-card">
-              <div class="person-photo" aria-hidden="true"><span>FOTO — Juana</span></div>
-              <div class="person-body">
-                <h3>Juana</h3>
-                <p class="person-role">Estudiante · Paraná</p>
-                <p class="person-intent">Quiere entrar por primera vez en un proyecto real.</p>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <div class="person-photo" aria-hidden="true"><span>FOTO — Andrés</span></div>
-              <div class="person-body">
-                <h3>Andrés</h3>
-                <p class="person-role">Ingeniero · Rosario</p>
-                <p class="person-intent">Puede ayudar con electrónica y sistemas embebidos.</p>
-              </div>
-            </article>
-
-            <article class="person-card">
-              <div class="person-photo" aria-hidden="true"><span>FOTO — Sofía</span></div>
-              <div class="person-body">
-                <h3>Sofía</h3>
-                <p class="person-role">Gestión pública · Santa Fe</p>
-                <p class="person-intent">Busca conectar tecnología con problemas concretos de la ciudad.</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="question-block">
-            <h3>Contanos un poco de vos...</h3>
-            <div class="chip-set" role="group" aria-label="¿Y vos, qué hacés?" data-chip-group="rol" data-mode="single">
-              <button type="button" class="chip" data-chip="Estudio" aria-pressed="false">Estudio</button>
-              <button type="button" class="chip" data-chip="Construyo cosas" aria-pressed="false">Construyo cosas</button>
-              <button type="button" class="chip" data-chip="Tengo una empresa" aria-pressed="false">Tengo una empresa</button>
-              <button type="button" class="chip" data-chip="Diseño" aria-pressed="false">Diseño</button>
-              <button type="button" class="chip" data-chip="Investigo" aria-pressed="false">Investigo</button>
-              <button type="button" class="chip" data-chip="Emprendo" aria-pressed="false">Emprendo</button>
-              <button type="button" class="chip" data-chip="Sector público" aria-pressed="false">Sector público</button>
-              <button type="button" class="chip" data-chip="Tengo una idea" aria-pressed="false">Tengo una idea</button>
-              <button type="button" class="chip" data-chip="Me interesa nomás" aria-pressed="false">Me interesa nomás</button>
-              <button type="button" class="chip" data-chip="Otra cosa" aria-pressed="false">Otra cosa</button>
-            </div>
-            <p class="question-echo" data-rol-echo aria-live="polite" hidden></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="mecanismo" class="section section-mechanism" data-section="Mecanismo">
-        <div class="shell">
-          <div class="section-heading">
-            <h2>El talento y las oportunidades</h2>
-          </div>
-
-          <div class="match-grid">
-            <div class="match-column">
-              <p class="eyebrow">Me hace falta...</p>
-              <div class="match-list" role="group" aria-label="Lo que hace falta">
-                <button
-                  type="button"
-                  class="match-need"
-                  data-match="0"
-                  aria-pressed="false"
-                  data-outcome="Andrés ya montó una red LoRa en el campo de un amigo. Se conocieron en la segunda maker night."
-                >“Necesito alguien que sepa LoRa.”</button>
-                <button
-                  type="button"
-                  class="match-need"
-                  data-match="1"
-                  aria-pressed="false"
-                  data-outcome="Dos semanas después había un prototipo impreso en 3D y una prueba con usuarios reales."
-                >“Busco diseñador para probar una idea.”</button>
-                <button
-                  type="button"
-                  class="match-need"
-                  data-match="2"
-                  aria-pressed="false"
-                  data-outcome="Martín abrió la planta para que un grupo midiera el proceso. Salieron tres ideas, una está en marcha."
-                >“Este proceso lo hacemos a mano.”</button>
-                <button
-                  type="button"
-                  class="match-need"
-                  data-match="3"
-                  aria-pressed="false"
-                  data-outcome="Juana la organizó. Vinieron 40 personas y un club de robótica prestó los kits."
-                >“Quiero organizar una noche de robótica.”</button>
-              </div>
-            </div>
-
-            <div class="match-column">
-              <p class="eyebrow">Me encontre a...</p>
-              <div class="match-list">
-                <div class="match-have" data-have="0">Andrés — electrónica y embebidos</div>
-                <div class="match-have" data-have="1">Lucía — diseño industrial</div>
-                <div class="match-have" data-have="2">Martín — planta metalúrgica</div>
-                <div class="match-have" data-have="3">Juana — estudiante con ganas</div>
-              </div>
-            </div>
-          </div>
-
-          <p class="match-outcome" data-match-outcome aria-live="polite" hidden></p>
-
-          <div class="question-block">
-            <h3>¿Qué buscas?</h3>
-            <div class="chip-set" role="group" aria-label="¿Qué te gustaría que pase?" data-chip-group="busca" data-mode="multi" data-cap="2">
-              <button type="button" class="chip" data-chip="Encontrar gente para un proyecto" aria-pressed="false">Encontrar gente para un proyecto</button>
-              <button type="button" class="chip" data-chip="Aprender" aria-pressed="false">Aprender</button>
-              <button type="button" class="chip" data-chip="Conseguir trabajo" aria-pressed="false">Conseguir trabajo</button>
-              <button type="button" class="chip" data-chip="Encontrar talento" aria-pressed="false">Encontrar talento</button>
-              <button type="button" class="chip" data-chip="Armar una startup" aria-pressed="false">Armar una startup</button>
-              <button type="button" class="chip" data-chip="Resolver un problema" aria-pressed="false">Resolver un problema</button>
-              <button type="button" class="chip" data-chip="Conocer gente interesante" aria-pressed="false">Conocer gente interesante</button>
-              <button type="button" class="chip" data-chip="Ayudar a otros" aria-pressed="false">Ayudar a otros</button>
-              <button type="button" class="chip" data-chip="Mostrar algo que estoy haciendo" aria-pressed="false">Mostrar algo que estoy haciendo</button>
-              <button type="button" class="chip" data-chip="Todavía no sé" aria-pressed="false">Todavía no sé</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!--
-        PLACEHOLDER: fechas, lugares y cupos de ejemplo. Actualizar con los encuentros
-        reales antes de publicar.
-      -->
-      <section id="eventos" class="section section-events" data-section="Eventos">
-        <div class="shell">
-          <div class="section-heading">
-            <h2>Nos encantaria verte en:</h2>
-          </div>
-
-          <ul class="event-list">
-            <li class="event-row">
-              <span class="event-date">12 SEP</span>
-              <p class="event-title">Maker night — sensores y cosas que miden el río</p>
-              <span class="event-place">Paraná</span>
-              <span class="event-state">quedan lugares</span>
-            </li>
-            <li class="event-row">
-              <span class="event-date">27 SEP</span>
-              <p class="event-title">Visita a planta: automatización en una metalúrgica</p>
-              <span class="event-place">Santa Fe</span>
-              <span class="event-state">quedan lugares</span>
-            </li>
-            <li class="event-row">
-              <span class="event-date">18 OCT</span>
-              <p class="event-title">Demo night — mostrá algo que estés haciendo, aunque no funcione</p>
-              <span class="event-place">Rosario</span>
-              <span class="event-state event-state-soon">abre pronto</span>
-            </li>
-            <li class="event-row is-past">
-              <span class="event-date">02 AGO</span>
-              <p class="event-title">Primer encuentro REMO — 30 personas, un proyector prestado</p>
-              <span class="event-place">Paraná</span>
-              <span class="event-state">pasó</span>
-            </li>
-          </ul>
-
-          <div class="question-block">
-            <h3>Eventos que no queres perderte:</h3>
-            <div class="chip-set" role="group" aria-label="¿A cuáles vendrías?" data-chip-group="eventos" data-mode="multi">
-              <button type="button" class="chip" data-chip="Encuentros informales" aria-pressed="false">Encuentros informales</button>
-              <button type="button" class="chip" data-chip="Workshops" aria-pressed="false">Workshops</button>
-              <button type="button" class="chip" data-chip="Hackathons" aria-pressed="false">Hackathons</button>
-              <button type="button" class="chip" data-chip="Demo nights" aria-pressed="false">Demo nights</button>
-              <button type="button" class="chip" data-chip="Visitas a empresas" aria-pressed="false">Visitas a empresas</button>
-              <button type="button" class="chip" data-chip="Proyectos comunitarios" aria-pressed="false">Proyectos comunitarios</button>
-              <button type="button" class="chip" data-chip="Charlas" aria-pressed="false">Charlas</button>
-              <button type="button" class="chip" data-chip="Maker nights" aria-pressed="false">Maker nights</button>
-              <button type="button" class="chip" data-chip="Cenas" aria-pressed="false">Cenas</button>
-              <button type="button" class="chip" data-chip="Desafíos técnicos" aria-pressed="false">Desafíos técnicos</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="participar" class="section section-participate" data-section="Participar">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow">Para empezar</p>
-            <h2>Tu presencia nos ayuda</h2>
-            <p>"Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo"</p>
-          </div>
-
-          <div class="participate-grid">
-            <div class="chip-set" role="group" aria-label="Qué podrías hacer" data-chip-group="gestos" data-mode="multi">
-              <button type="button" class="chip" data-chip="venir a algo" aria-pressed="false">venir a algo</button>
-              <button type="button" class="chip" data-chip="ayudar a alguien" aria-pressed="false">ayudar a alguien</button>
-              <button type="button" class="chip" data-chip="proponer una idea" aria-pressed="false">proponer una idea</button>
-              <button type="button" class="chip" data-chip="prestar una herramienta" aria-pressed="false">prestar una herramienta</button>
-              <button type="button" class="chip" data-chip="contar lo que sabés" aria-pressed="false">contar lo que sabés</button>
-              <button type="button" class="chip" data-chip="conectar dos personas" aria-pressed="false">conectar dos personas</button>
-              <button type="button" class="chip" data-chip="simplemente aparecer" aria-pressed="false">simplemente aparecer</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="sumarse" class="section section-join section-dark" data-section="Sumarse">
-        <div class="shell join-grid">
-          <div class="join-heading">
-            <h2>¿Remamos?</h2>
-            <p>Ya conociste un poco de REMO. Ahora nos encantaria conocerte a vos!</p>
-          </div>
-
-          <div class="join-panel">
-            <div class="answers-summary" data-summary hidden aria-label="Tus respuestas"></div>
-            <form class="join-form" data-join-form novalidate>
-              <div class="field-row">
-                <label class="field">
-                  <span>Nombre</span>
-                  <input name="name" autocomplete="name" required />
-                  <small data-error="name"></small>
-                </label>
-                <label class="field">
-                  <span>Ciudad</span>
-                  <input name="city" autocomplete="address-level2" required />
-                  <small data-error="city"></small>
-                </label>
-              </div>
-              <label class="field">
-                <span>Mail o WhatsApp</span>
-                <input name="contact" autocomplete="email" inputmode="email" required />
-                <small data-error="contact"></small>
-              </label>
-              <label class="field">
-                <span>como podemos ayudarte? <em></em></span>
-                <textarea name="note" rows="3" maxlength="300"></textarea>
-              </label>
-              <button class="submit-button" type="submit" data-submit>
-                <span data-submit-label>Sumarme</span>
-                <span aria-hidden="true">→</span>
-              </button>
-              <p class="form-status" data-form-status aria-live="polite"></p>
-
-              <!--
-                PLACEHOLDER: el envío todavía no está conectado. La lógica está en
-                enviarInscripcion() dentro de assets/js/interactions.js.
-                Cuando conectes el backend, borrá este <p> de acá y el de la confirmación.
-              -->
-        
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-inner">
-        <a class="brand" href="#inicio">REMO</a>
-        <p>Red de Emprendedores y Makers de las Orillas.</p>
-      </div>
+      <p>Paraná · Santa Fe · Rosario · y todas las orillas</p>
+      <p>Hecho cerca del río <span aria-hidden="true">→</span></p>
     </footer>
-
-    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
