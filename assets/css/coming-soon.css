@@ -106,36 +106,8 @@ h1 {
   display: grid;
   width: min(100%, 1600px);
   margin-inline: auto;
-  align-content: space-between;
+  align-content: center;
   padding: clamp(2rem, 5vh, 4.5rem) clamp(1.25rem, 4vw, 5rem) clamp(3rem, 8vh, 7rem);
-}
-
-.status-line {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.7rem;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: clamp(0.63rem, 0.6rem + 0.12vw, 0.72rem);
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.status-line p {
-  margin-bottom: 0;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--signal);
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 rgb(255 93 55 / 45%);
-  animation: pulse 2.4s ease-out infinite;
-}
-
-.status-number {
-  color: var(--soft-ink);
 }
 
 .hero-grid {
@@ -143,17 +115,6 @@ h1 {
   grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.55fr);
   gap: clamp(2rem, 7vw, 8rem);
   align-items: end;
-  margin-top: clamp(5rem, 14vh, 11rem);
-}
-
-.eyebrow {
-  margin-bottom: clamp(1.1rem, 2vw, 1.8rem);
-  color: var(--river);
-  font-family: var(--font-mono);
-  font-size: clamp(0.68rem, 0.64rem + 0.18vw, 0.78rem);
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -197,15 +158,6 @@ h1 {
   margin-bottom: 2rem;
   font-size: clamp(1.15rem, 1rem + 0.6vw, 1.55rem);
   line-height: 1.42;
-}
-
-.aside-note {
-  margin-bottom: 2rem;
-  color: var(--soft-ink);
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 1.05rem + 0.55vw, 1.55rem);
-  font-style: italic;
-  line-height: 1.35;
 }
 
 .cowork-link {
@@ -285,16 +237,6 @@ h1 {
   margin-bottom: 0;
 }
 
-@keyframes pulse {
-  70% {
-    box-shadow: 0 0 0 9px rgb(255 93 55 / 0%);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgb(255 93 55 / 0%);
-  }
-}
-
 @media (max-width: 820px) {
   .site-header {
     min-height: 68px;
@@ -312,15 +254,15 @@ h1 {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
-    margin-top: clamp(3.5rem, 9vh, 6rem);
   }
 
   .hero-name {
-    font-size: clamp(4.8rem, 25vw, 9rem);
+    font-size: clamp(4.5rem, 22vw, 8rem);
   }
 
   .hero-tagline {
-    font-size: clamp(2rem, 9.5vw, 4rem);
+    max-width: none;
+    font-size: clamp(2rem, 9.2vw, 4rem);
     letter-spacing: -0.045em;
   }
 
@@ -335,13 +277,8 @@ h1 {
 
 @media (max-width: 520px) {
   .header-note,
-  .status-number,
   .site-footer p:last-child {
     display: none;
-  }
-
-  .status-line {
-    grid-template-columns: auto 1fr;
   }
 
   .site-footer {
