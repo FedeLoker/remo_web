@@ -1,0 +1,25 @@
+name: Only stage can target main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  source-branch:
+    name: Source branch is stage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate source repository and branch
+        env:
+          HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+          TARGET_REPOSITORY: ${{ github.repository }}
+        run: |
+          if [[ "$HEAD_REPOSITORY" != "$TARGET_REPOSITORY" || "$HEAD_BRANCH" != "stage" ]]; then
+            echo "Only pull requests from $TARGET_REPOSITORY:stage can target main."
+            exit 1
+          fi
