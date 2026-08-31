@@ -1,4 +1,4 @@
-name: Only stage can target main
+name: Only stage or hotfix can target main
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   source-branch:
-    name: Source branch is stage
+    name: Source branch is stage or hotfix
     runs-on: ubuntu-latest
     steps:
       - name: Validate source repository and branch
@@ -19,7 +19,15 @@ jobs:
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
           TARGET_REPOSITORY: ${{ github.repository }}
         run: |
-          if [[ "$HEAD_REPOSITORY" != "$TARGET_REPOSITORY" || "$HEAD_BRANCH" != "stage" ]]; then
-            echo "Only pull requests from $TARGET_REPOSITORY:stage can target main."
+          if [[ "$HEAD_REPOSITORY" != "$TARGET_REPOSITORY" ]]; then
+            echo "Only pull requests from branches in $TARGET_REPOSITORY can target main."
             exit 1
           fi
+
+          case "$HEAD_BRANCH" in
+            stage|hotfix/*) ;;
+            *)
+              echo "Only pull requests from stage or hotfix/* can target main."
+              exit 1
+              ;;
+          esac
