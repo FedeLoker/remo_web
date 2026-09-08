@@ -1,84 +1,150 @@
-# Landing REMO
+# REMO Litoral Web
 
-Landing estática para la etapa inicial de REMO, armada sobre el documento de concepto
-y las maquetas de `ejemplo claude design/`.
+Static frontend for [REMO Litoral](https://remolitoral.ar). This repository contains the
+HTML, CSS, and browser-side JavaScript for the public website. Runtime infrastructure,
+the control panel, forms, redirects, and deployment services are maintained separately
+in `FedeLoker/remo_web_infra`.
 
-## Cómo verla
+There is no compilation step, package manager, or application server in this repository.
+The site is served as static files.
 
-Por usar módulos JavaScript, debe abrirse desde un servidor local:
+## Environments and deployment
+
+| Environment | Git branch | URL | Purpose |
+| --- | --- | --- | --- |
+| Production | `main` | <https://remolitoral.ar> | Public website |
+| Staging | `stage` | <https://staging.remolitoral.ar> | Review and acceptance before production |
+| Full-site archive | `gian/full-web` | Not deployed | Preserved full-site source from `stage` commit `b1b2948`, plus this documentation |
+
+The branch is named `stage`, while the environment and subdomain are named `staging`.
+`stagging.remolitoral.ar` is not a configured hostname.
+
+The deployment service maintained in the infrastructure repository checks `main` and
+`stage` approximately once per minute. It publishes each commit as an immutable release,
+runs an HTTP health check, and keeps the previous release active if that check fails.
+Pushing any other branch does not deploy a website.
+
+At the time this README was written, `main` contains the temporary coming-soon page and
+`stage` contains the full interactive landing page. The `gian/full-web` branch preserves
+that full-site version independently of future staging changes: commit `b1b2948` is the exact
+snapshot, followed only by the documentation commit. Treat the branch as read-only after that
+documentation is added. Create a new branch from it if that version needs further work.
+
+## Run locally
+
+Requirements:
+
+- Python 3, or any static HTTP server.
+- A current web browser.
+
+Clone the repository and start a local server from its root:
 
 ```bash
+git clone git@github.com:FedeLoker/remo_web.git
+cd remo_web
 python3 -m http.server 8877
 ```
 
-Después visitar `http://localhost:8877`.
+Then open <http://localhost:8877>. A server is required because the browser loads the
+JavaScript as ES modules; opening `index.html` directly from the filesystem is not supported.
 
-## Recorrido
+There is no dependency installation or build command. Stop the server with `Ctrl+C`.
 
-Sigue el orden del concepto: primero evidencia, después participación, recién al final identidad.
+## Project structure
 
-1. **Hero**: qué es REMO.
-2. **Personas**: quién anda por acá. Cierra con la pregunta *Contanos un poco de vos…*
-   (10 opciones, selección única) y devuelve un dato al responder.
-3. **Mecanismo**: necesidades y capacidades que se encuentran al tocarlas. Cierra con
-   *¿Qué buscas?* (10 opciones, hasta dos).
-4. **Eventos**: cartelera de encuentros. Cierra con *Eventos que no queres perderte:*
-   (10 opciones, múltiple).
-5. **Participar**: siete gestos mínimos.
-6. **Sumarse**: devuelve lo respondido y pide nombre, ciudad y un contacto.
+- `index.html`: page structure and content.
+- `assets/css/tokens.css`: colors, typography, spacing, and design tokens.
+- `assets/css/base.css`: reset and shared accessibility defaults.
+- `assets/css/layout.css`: containers and vertical rhythm.
+- `assets/css/components.css`: navigation, chips, questions, and forms.
+- `assets/css/sections.css`: full-site section styles.
+- `assets/css/coming-soon.css`: temporary production landing styles on `main`.
+- `assets/css/responsive.css`: tablet and mobile adjustments.
+- `assets/css/motion.css`: transitions and reduced-motion behavior.
+- `assets/js/state.js`: session state for roles, searches, events, and actions.
+- `assets/js/onboarding.js`: interactive choices, matching, and the final summary.
+- `assets/js/interactions.js`: form validation and submission behavior.
+- `assets/js/animations.js`: hero animation and mobile navigation.
+- `assets/js/main.js`: JavaScript entry point.
+- `ejemplo claude design/`: design references; not part of the deployed runtime.
 
-Todas las respuestas son opcionales, viven en `sessionStorage` y se ven resumidas en el cierre.
+## Full-site behavior
 
-Quedaron en el CSS y el JS los estilos de tres bloques que hoy no están en el HTML — el cruce
-de texto libre (`.cross-*`), el tramo de visión (`.vision-*`), los pasos 01–05 (`.flow-*`) y la
-palanca de empujes (`.lever-*`). No molestan y sirven si alguno vuelve; el JS los detecta y sigue
-de largo si no están.
+The full landing page follows this sequence: introduction, people, matching mechanism,
+events, participation options, and contact form. Answers are optional, remain in the
+browser's `sessionStorage`, and are summarized at the end of the flow.
 
-## Contenido de muestra a reemplazar
+Several people, events, matching examples, photos, and response counts are sample content.
+Search for `PLACEHOLDER` before publishing a full-site revision and replace every value with
+approved content.
 
-Estas partes vienen del documento de concepto y son **placeholders**; están marcadas con
-comentarios `PLACEHOLDER` en `index.html`:
+### Contact submission
 
-- **Personas** (Lucía, Martín, Juana, Andrés, Sofía) y la cita: reemplazar por integrantes
-  reales y cambiar los marcadores `FOTO — …` por fotos.
-- **Mecanismo**: los pares "me hace falta / me encontré a" y sus resultados.
-- **Eventos**: fechas, ciudades y estados de cupo.
-- **Eco de la primera pregunta**: los conteos de `rolEchoes` en `assets/js/onboarding.js`
-  ("Hay 14 personas acá que…") son inventados; ajustarlos o vaciarlos antes de publicar.
+The full-site contact form validates name, city, and either an email address or a phone
+number. Submission is intentionally a placeholder: `enviarInscripcion()` in
+`assets/js/interactions.js` logs the payload and returns success without storing or sending it.
 
-## Archivos principales
+To connect it to a backend:
 
-- `index.html`: estructura y copy.
-- `assets/css/tokens.css`: colores, tipografías, escalas y espacios.
-- `assets/css/base.css`: normalización y accesibilidad general.
-- `assets/css/layout.css`: contenedores y ritmo vertical.
-- `assets/css/components.css`: navegación, chips, bloques de pregunta y formulario.
-- `assets/css/sections.css`: hero, personas, mecanismo, eventos, participar, cierre y pie.
-- `assets/css/responsive.css`: adaptaciones para tablet y mobile.
-- `assets/css/motion.css`: entradas y movimiento reducido.
-- `assets/js/state.js`: estado de la sesión (`rol`, `busca`, `eventos`, `gestos`).
-- `assets/js/onboarding.js`: chips, eco, mecanismo y resumen.
-- `assets/js/interactions.js`: validación del formulario y envío (hoy, placeholder).
-- `assets/js/animations.js`: motivo visual del hero y menú móvil.
+1. Replace the body of `enviarInscripcion()` with a `fetch` request.
+2. Return `{ ok: true }` only after the server confirms the submission.
+3. Remove the two `pending-note` paragraphs from `index.html` once data is actually stored.
+4. Test success, validation errors, network failures, and repeated submissions.
 
-## Envío del contacto — todavía sin conectar
+Do not remove the on-page warning before a real endpoint is available.
 
-El formulario pide **nombre, ciudad y un contacto** (mail o WhatsApp: vale cualquiera de los dos,
-se acepta un mail bien formado o un número de al menos 8 dígitos). Valida los tres campos, muestra
-los errores en su lugar y recién entonces "envía".
+## Development workflow
 
-**El envío es un placeholder.** Toda la lógica está en `enviarInscripcion()`, arriba de
-`assets/js/interactions.js`: hoy sólo escribe los datos en la consola y devuelve `{ ok: true }`.
-Nada se guarda en ningún lado.
+Normal changes start from `stage` and return to `stage` through a pull request:
 
-Para conectarlo:
+```bash
+git switch stage
+git pull --ff-only origin stage
+git switch -c feature/short-description
 
-1. Reemplazar el cuerpo de `enviarInscripcion()` por el `fetch` al backend, y devolver `ok: true`
-   **sólo** después de una respuesta exitosa del servidor. El resto —validación, estado del botón,
-   confirmación, manejo de error— ya está armado alrededor y no hay que tocarlo.
-2. Borrar los dos `<p class="pending-note">` del `index.html` (están marcados con un comentario
-   `PLACEHOLDER`) y, si querés, la regla `.pending-note` de `assets/css/components.css`.
+# Make and validate the change.
 
-Mientras tanto esos dos avisos dejan claro en pantalla que el envío no está conectado, para que
-nadie complete el formulario creyendo que se sumó. Si el envío falla, la confirmación no aparece:
-se muestra un error y el botón vuelve a habilitarse.
+git push -u origin feature/short-description
+```
+
+Open the pull request against `stage`. Once it is approved and merged, verify the change at
+<https://staging.remolitoral.ar>. To release, open a pull request from `stage` to `main` and
+verify production after merging. Urgent production fixes may use a `hotfix/*` branch; the
+`Only stage or hotfix can target main` check rejects other source branches.
+
+Pull requests to both `main` and `stage` are protected:
+
+- at least one approving review is required;
+- approval from code owner `@FedeLoker` is required for every changed file;
+- stale approvals are dismissed when new commits are pushed;
+- the last push must be approved by someone other than its author;
+- force pushes and branch deletion are disabled.
+
+`stage` also requires every change to arrive through a pull request, including changes made
+by repository administrators. On `main`, repository administrators may bypass the pull-request
+requirement so that `@FedeLoker` can push directly when necessary. Keep administrator access
+limited, because every administrator receives the same bypass.
+
+GitHub does not allow a pull request author to approve their own pull request. Because
+`@FedeLoker` is the sole code owner, changes authored by that account should be pushed directly
+to `main` only when the explicit bypass is appropriate; normal staging changes should be
+authored from a separate contributor account.
+
+## Validation checklist
+
+This repository currently has no automated frontend test suite or linter. Before requesting
+a review:
+
+1. Serve the site locally rather than opening the HTML file directly.
+2. Check desktop and mobile layouts.
+3. Navigate the full page with a keyboard and verify visible focus states.
+4. Confirm the browser console has no errors.
+5. Exercise interactive choices and reload behavior within the same tab.
+6. Test valid and invalid contact form input when working on the full-site branch.
+7. Verify that all internal links and asset requests return successfully.
+
+A simple server check is:
+
+```bash
+curl --fail --head http://localhost:8877/
+```
