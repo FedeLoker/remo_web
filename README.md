@@ -23,10 +23,7 @@ runs an HTTP health check, and keeps the previous release active if that check f
 Pushing any other branch does not deploy a website.
 
 At the time this README was written, `main` contains the temporary coming-soon page and
-`stage` contains the full interactive landing page. The `gian/full-web` branch preserves
-that full-site version independently of future staging changes: commit `b1b2948` is the exact
-snapshot, followed only by the documentation commit. Treat the branch as read-only after that
-documentation is added. Create a new branch from it if that version needs further work.
+`stage` contains the full interactive landing page.
 
 ## Run locally
 
@@ -107,8 +104,8 @@ git push -u origin feature/short-description
 
 Open the pull request against `stage`. Once it is approved and merged, verify the change at
 <https://staging.remolitoral.ar>. To release, open a pull request from `stage` to `main` and
-verify production after merging. Urgent production fixes may use a `hotfix/*` branch; the
-`Only stage or hotfix can target main` check rejects other source branches.
+verify production after merging. Pull requests to `main` must pass the configured source-branch
+check.
 
 Pull requests to both `main` and `stage` are protected:
 
