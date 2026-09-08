@@ -49,6 +49,5 @@ Pull requests to `main` and `stage` require:
 - a new approval after additional commits are pushed;
 - approval of the most recent push by someone other than its author.
 
-Force pushes and branch deletion are disabled for both branches. `stage` always requires a
-pull request, including for administrators. Administrators may push directly to `main` when
-necessary.
+Force pushes and branch deletion are disabled for both branches. Administrators may push
+directly to `main` and `stage` when necessary.
