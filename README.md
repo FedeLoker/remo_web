@@ -14,10 +14,8 @@ The site is served as static files.
 | --- | --- | --- | --- |
 | Production | `main` | <https://remolitoral.ar> | Public website |
 | Staging | `stage` | <https://staging.remolitoral.ar> | Review and acceptance before production |
-| Full-site archive | `gian/full-web` | Not deployed | Preserved full-site source from `stage` commit `b1b2948`, plus this documentation |
 
-The branch is named `stage`, while the environment and subdomain are named `staging`.
-`stagging.remolitoral.ar` is not a configured hostname.
+Staging is available at <https://staging.remolitoral.ar>.
 
 The deployment service maintained in the infrastructure repository checks `main` and
 `stage` approximately once per minute. It publishes each commit as an immutable release,
